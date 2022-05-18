@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kpec/view/login/login.dart';
+import 'package:kpec/view/login_page.dart';
+import 'package:kpec/view/main_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,12 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LoginScreen(),
+      initialRoute: "/login",
+      routes: {
+        "/login": (context) => LoginPage(),
+        "/main": (context) => MainPage(),
+      },
+      home: LoginPage(),
     );
   }
 }

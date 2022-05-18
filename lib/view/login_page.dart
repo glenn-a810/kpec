@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class LoginPage extends StatelessWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,10 @@ class LoginScreen extends StatelessWidget {
             alignment: Alignment.center,
             margin: EdgeInsets.symmetric(horizontal: 40),
             child: TextField(
-              decoration: InputDecoration(labelText: '관리자 아이디'),
+              decoration: InputDecoration(
+                labelText: '관리자 아이디',
+                prefixIcon: Icon(Icons.account_circle_outlined),
+              ),
             ),
           ),
           SizedBox(
@@ -35,7 +38,10 @@ class LoginScreen extends StatelessWidget {
             alignment: Alignment.center,
             margin: EdgeInsets.symmetric(horizontal: 40),
             child: TextField(
-              decoration: InputDecoration(labelText: '관리자 비밀번호'),
+              decoration: InputDecoration(
+                labelText: '관리자 비밀번호',
+                prefixIcon: Icon(Icons.lock_outline_rounded),
+              ),
               obscureText: true,
             ),
           ),
@@ -46,7 +52,11 @@ class LoginScreen extends StatelessWidget {
             alignment: Alignment.center,
             margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                // Navigator.of(context).pushNamed('/main');
+                Navigator.pushNamedAndRemoveUntil(
+                    context, '/main', (route) => false);
+              },
               child: Text('로그인'),
               style: ElevatedButton.styleFrom(
                   primary: Colors.blueAccent,
