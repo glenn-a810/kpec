@@ -18,7 +18,43 @@ class MainPage extends StatelessWidget {
           )
         ],
       ),
-      body: Text('여기에 데이터 뿌리면 되겠네'),
+      body: Center(
+        child: ElevatedButton(
+          child: Text('하단 메뉴 테스트'),
+          onPressed: () {
+            showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      ListTile(
+                        leading: Icon(Icons.access_time),
+                        title: Text('오전반'),
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.access_time),
+                        title: Text('오후반'),
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.nightlight_round),
+                        title: Text('야간교육'),
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                      )
+                    ],
+                  );
+                });
+          },
+        ),
+      ),
     );
   }
 }
