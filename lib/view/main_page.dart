@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
@@ -26,7 +28,7 @@ class MainPage extends StatelessWidget {
                 context: context,
                 builder: (context) {
                   return Column(
-                    mainAxisSize: MainAxisSize.min,
+                    mainAxisSize: MainAxisSize.max,
                     children: [
                       ListTile(
                         leading: Icon(Icons.access_time),
@@ -57,4 +59,21 @@ class MainPage extends StatelessWidget {
       ),
     );
   }
+}
+
+void _showDialog() {
+  showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('교육시간 선택'),
+          content: Text('오전/오후/야간'),
+          actions: [
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('닫기'),
+            )
+          ],
+        );
+      });
 }
