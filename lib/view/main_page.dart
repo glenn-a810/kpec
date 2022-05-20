@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
@@ -22,38 +20,39 @@ class MainPage extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          child: Text('하단 메뉴 테스트'),
+          child: Text('팝업 테스트'),
           onPressed: () {
-            showModalBottomSheet(
-                context: context,
-                builder: (context) {
-                  return Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      ListTile(
-                        leading: Icon(Icons.access_time),
-                        title: Text('오전반'),
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                      ),
-                      ListTile(
-                        leading: Icon(Icons.access_time),
-                        title: Text('오후반'),
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                      ),
-                      ListTile(
-                        leading: Icon(Icons.nightlight_round),
-                        title: Text('야간교육'),
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                      )
-                    ],
-                  );
-                });
+            _showDialog(context);
+            // showModalBottomSheet(
+            //     context: context,
+            //     builder: (context) {
+            //       return Column(
+            //         mainAxisSize: MainAxisSize.max,
+            //         children: [
+            //           ListTile(
+            //             leading: Icon(Icons.access_time),
+            //             title: Text('오전반'),
+            //             onTap: () {
+            //               Navigator.pop(context);
+            //             },
+            //           ),
+            //           ListTile(
+            //             leading: Icon(Icons.access_time),
+            //             title: Text('오후반'),
+            //             onTap: () {
+            //               Navigator.pop(context);
+            //             },
+            //           ),
+            //           ListTile(
+            //             leading: Icon(Icons.nightlight_round),
+            //             title: Text('야간교육'),
+            //             onTap: () {
+            //               Navigator.pop(context);
+            //             },
+            //           )
+            //         ],
+            //       );
+            //     });
           },
         ),
       ),
@@ -61,7 +60,7 @@ class MainPage extends StatelessWidget {
   }
 }
 
-void _showDialog() {
+void _showDialog(BuildContext context) {
   showDialog(
       context: context,
       builder: (context) {
@@ -70,7 +69,9 @@ void _showDialog() {
           content: Text('오전/오후/야간'),
           actions: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
               child: Text('닫기'),
             )
           ],
