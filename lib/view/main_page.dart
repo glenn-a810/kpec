@@ -64,16 +64,30 @@ void _showDialog(BuildContext context) {
   showDialog(
       context: context,
       builder: (context) {
-        return AlertDialog(
-          title: Text('교육시간 선택'),
-          content: Text('오전/오후/야간'),
-          actions: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pop();
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ListTile(
+              leading: Icon(Icons.light_mode_outlined),
+              title: Text('오전반'),
+              onTap: () {
+                Navigator.pop(context);
               },
-              child: Text('닫기'),
-            )
+            ),
+            ListTile(
+              leading: Icon(Icons.wb_twilight_outlined),
+              title: Text('오후반'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.nightlight_round_outlined),
+              title: Text('야간교육'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
           ],
         );
       });
