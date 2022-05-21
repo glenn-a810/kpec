@@ -3,7 +3,9 @@ import 'package:kpec/view/login_page.dart';
 import 'package:kpec/view/main_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    home: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {

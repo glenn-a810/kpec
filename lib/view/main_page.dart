@@ -23,36 +23,6 @@ class MainPage extends StatelessWidget {
           child: Text('팝업 테스트'),
           onPressed: () {
             _showDialog(context);
-            // showModalBottomSheet(
-            //     context: context,
-            //     builder: (context) {
-            //       return Column(
-            //         mainAxisSize: MainAxisSize.max,
-            //         children: [
-            //           ListTile(
-            //             leading: Icon(Icons.access_time),
-            //             title: Text('오전반'),
-            //             onTap: () {
-            //               Navigator.pop(context);
-            //             },
-            //           ),
-            //           ListTile(
-            //             leading: Icon(Icons.access_time),
-            //             title: Text('오후반'),
-            //             onTap: () {
-            //               Navigator.pop(context);
-            //             },
-            //           ),
-            //           ListTile(
-            //             leading: Icon(Icons.nightlight_round),
-            //             title: Text('야간교육'),
-            //             onTap: () {
-            //               Navigator.pop(context);
-            //             },
-            //           )
-            //         ],
-            //       );
-            //     });
           },
         ),
       ),
@@ -64,31 +34,33 @@ void _showDialog(BuildContext context) {
   showDialog(
       context: context,
       builder: (context) {
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ListTile(
-              leading: Icon(Icons.light_mode_outlined),
-              title: Text('오전반'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.wb_twilight_outlined),
-              title: Text('오후반'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.nightlight_round_outlined),
-              title: Text('야간교육'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
+        return Scaffold(
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ListTile(
+                leading: Icon(Icons.light_mode_outlined),
+                title: Text('오전반'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.wb_twilight_outlined),
+                title: Text('오후반'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.nightlight_round_outlined),
+                title: Text('야간교육'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
         );
       });
 }
