@@ -30,36 +30,39 @@ class MainPage extends StatelessWidget {
   }
 }
 
-void _showDialog(BuildContext context) {
+void _showDialog(context) {
   showDialog(
       context: context,
       builder: (context) {
         return Scaffold(
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ListTile(
-                leading: Icon(Icons.light_mode_outlined),
-                title: Text('오전반'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                leading: Icon(Icons.wb_twilight_outlined),
-                title: Text('오후반'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                leading: Icon(Icons.nightlight_round_outlined),
-                title: Text('야간교육'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ],
+          body: AlertDialog(
+            title: Text('교육 시간 선택'),
+            content: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ListTile(
+                  leading: Icon(Icons.light_mode_outlined),
+                  title: Text('오전반'),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.wb_twilight_outlined),
+                  title: Text('오후반'),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.nightlight_round_outlined),
+                  title: Text('야간교육'),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            ),
           ),
         );
       });
