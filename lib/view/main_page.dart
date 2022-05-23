@@ -33,12 +33,14 @@ class MainPage extends StatelessWidget {
 void _showDialog(context) {
   showDialog(
       context: context,
+      barrierDismissible: false,
       builder: (context) {
         return Scaffold(
+          backgroundColor: Colors.transparent,
           body: AlertDialog(
             title: Text('교육 시간 선택'),
             content: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 ListTile(
                   leading: Icon(Icons.light_mode_outlined),
