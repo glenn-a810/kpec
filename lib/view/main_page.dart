@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
 
-class MainPage extends StatelessWidget {
+class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
+
+  @override
+  State<MainPage> createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Future.delayed(Duration.zero, () {
+      _showDialog(context);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +52,7 @@ void _showDialog(context) {
         return Scaffold(
           backgroundColor: Colors.transparent,
           body: AlertDialog(
-            title: Text('교육 시간 선택'),
+            title: Text('교육시간 선택'),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
