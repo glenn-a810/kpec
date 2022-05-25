@@ -36,14 +36,14 @@ class _MainPageState extends State<MainPage> {
           )
         ],
       ),
-      body: Center(
-        child: ElevatedButton(
-          child: Text('팝업 테스트'),
-          onPressed: () {
-            _showDialog(context);
-          },
-        ),
-      ),
+      body: Center(child: Text('팝업값 : ')
+          // ElevatedButton(
+          //   child: Text('팝업 테스트'),
+          //   onPressed: () {
+          //     _showDialog(context);
+          //   },
+          // ),
+          ),
     );
   }
 }
