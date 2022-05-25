@@ -36,14 +36,25 @@ class _MainPageState extends State<MainPage> {
           )
         ],
       ),
-      body: Center(child: Text('팝업값 : ')
-          // ElevatedButton(
-          //   child: Text('팝업 테스트'),
-          //   onPressed: () {
-          //     _showDialog(context);
-          //   },
-          // ),
+      body: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2, // 행의 수
+            childAspectRatio: 1.5, // 카드 높이
           ),
+          itemCount: 8, // 총 카드 수
+          itemBuilder: (context, idx) {
+            return Card(
+              margin: EdgeInsets.all(10.0),
+              color: Colors.blue,
+              child: Text('텍스트 위치'),
+            );
+          }),
+      // ElevatedButton(
+      //   child: Text('팝업 테스트'),
+      //   onPressed: () {
+      //     _showDialog(context);
+      //   },
+      // ),
     );
   }
 }
@@ -69,9 +80,13 @@ void _showDialog(context) {
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(
-                  '$dateConvertFormat',
-                  style: TextStyle(),
+                // Text('$dateConvertFormat'),
+                Padding(
+                  padding: EdgeInsets.only(top: 10.0, bottom: 30.0),
+                  child: Text(
+                    '$dateConvertFormat',
+                    style: TextStyle(fontSize: 20),
+                  ),
                 ),
                 ListTile(
                   leading: Icon(Icons.light_mode_outlined),
