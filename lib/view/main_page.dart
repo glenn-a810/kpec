@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:kpec/view/qr_scanner.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -36,14 +37,18 @@ class _MainPageState extends State<MainPage> {
           )
         ],
       ),
-      body: Center(child: Text('팝업값 : ')
-          // ElevatedButton(
-          //   child: Text('팝업 테스트'),
-          //   onPressed: () {
-          //     _showDialog(context);
-          //   },
-          // ),
-          ),
+      body: Center(
+        child: ElevatedButton(
+          child: Text('QR 테스트'),
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => qrScanner(),
+              ),
+            );
+          },
+        ),
+      ),
     );
   }
 }
