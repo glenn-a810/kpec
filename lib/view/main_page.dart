@@ -23,6 +23,8 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     // Size size = MediaQuery.of(context).size;
+    // final code = Navigator.push(
+    //     context, MaterialPageRoute(builder: (context) => qrScanner()));
 
     return Scaffold(
       appBar: AppBar(
@@ -38,15 +40,20 @@ class _MainPageState extends State<MainPage> {
         ],
       ),
       body: Center(
-        child: ElevatedButton(
-          child: Text('QR 테스트'),
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => qrScanner(),
-              ),
-            );
-          },
+        child: Column(
+          children: [
+            ElevatedButton(
+              child: Text('QR 테스트'),
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => qrScanner(),
+                  ),
+                );
+              },
+            ),
+            Text('QR data : '),
+          ],
         ),
       ),
     );

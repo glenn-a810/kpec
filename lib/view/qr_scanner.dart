@@ -25,6 +25,7 @@ class _qrScannerState extends State<qrScanner> {
           } else {
             final String code = qrcode.rawValue!;
             print('QR스캔 성공 $code');
+            Navigator.pop(context, code);
           }
         },
       ),
