@@ -4,7 +4,8 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:kpec/view/qr_scanner.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+  const MainPage({Key? key, this.initialData}) : super(key: key);
+  final initialData;
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -53,6 +54,7 @@ class _MainPageState extends State<MainPage> {
               },
             ),
             Text('QR data : '),
+            Text(widget.initialData),
           ],
         ),
       ),
@@ -61,6 +63,8 @@ class _MainPageState extends State<MainPage> {
 }
 
 void _showDialog(context) {
+  String initialData;
+
   var currentDate = DateTime.now();
   String dateConvertFormat =
       DateFormat('yyyy년 M월 d일 (E)', 'ko').format(currentDate);
@@ -88,8 +92,14 @@ void _showDialog(context) {
                 ListTile(
                   leading: Icon(Icons.light_mode_outlined),
                   title: Text('오전교육'),
-                  onTap: () {
-                    Navigator.pop(context);
+                  onTap: () async {
+                    initialData = '오전교육';
+                    // Navigator.pop(context);
+                    await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                MainPage(initialData: initialData)));
                   },
                 ),
                 ListTile(
