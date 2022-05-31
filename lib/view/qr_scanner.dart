@@ -18,7 +18,7 @@ class _qrScannerState extends State<qrScanner> {
       body: MobileScanner(
         allowDuplicates: false,
         controller: MobileScannerController(
-            facing: CameraFacing.front, torchEnabled: true),
+            facing: CameraFacing.back, torchEnabled: true),
         onDetect: (qrcode, args) {
           if (qrcode.rawValue == null) {
             print('QR스캔 실패');
