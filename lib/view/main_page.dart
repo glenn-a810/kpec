@@ -40,24 +40,38 @@ class _MainPageState extends State<MainPage> {
           )
         ],
       ),
-      body: Center(
-        child: Column(
-          children: [
-            ElevatedButton(
-              child: Text('QR 테스트'),
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => qrScanner(),
-                  ),
-                );
-              },
-            ),
-            Text('QR data : '),
-            Text(widget.initialData),
-          ],
+      body: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+        elevation: 4.0,
+        child: IconButton(
+          icon: Icon(Icons.qr_code_outlined),
+          iconSize: 150,
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => qrScanner()));
+          },
         ),
       ),
+      // Center(
+      //   child: Column(
+      //     children: [
+      //       ElevatedButton(
+      //         child: Text('QR 테스트'),
+      //         onPressed: () {
+      //           Navigator.of(context).push(
+      //             MaterialPageRoute(
+      //               builder: (context) => qrScanner(),
+      //             ),
+      //           );
+      //         },
+      //       ),
+      //       Text('QR data : '),
+      //       Text(widget.initialData),
+      //     ],
+      //   ),
+      // ),
     );
   }
 }
