@@ -40,20 +40,73 @@ class _MainPageState extends State<MainPage> {
           )
         ],
       ),
-      body: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16.0),
-        ),
-        elevation: 4.0,
-        child: IconButton(
-          icon: Icon(Icons.qr_code_outlined),
-          iconSize: 150,
-          onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => qrScanner()));
-          },
+      body: Container(
+        child: Center(
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text('관리자 소속'),
+                  Text('로그인 정보'),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text('출결관련 정보'),
+                  Text('교육장 정보 표시'),
+                  Text('교육일자 정보'),
+                  Text('교육시간 정보'),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Card(
+                    elevation: 5.0,
+                    child: IconButton(
+                      icon: Icon(Icons.qr_code_outlined),
+                      iconSize: 150,
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => qrScanner()));
+                      },
+                    ),
+                  ),
+                  Card(
+                    elevation: 5.0,
+                    child: IconButton(
+                      icon: Icon(Icons.qr_code_outlined),
+                      iconSize: 150,
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => qrScanner()));
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
+      /////////////////////////////////////////////////////////////////////////////
+      // Card(
+      //   shape: RoundedRectangleBorder(
+      //     borderRadius: BorderRadius.circular(16.0),
+      //   ),
+      //   elevation: 4.0,
+      //   child: IconButton(
+      //     icon: Icon(Icons.qr_code_outlined),
+      //     iconSize: 150,
+      //     onPressed: () {
+      //       Navigator.of(context)
+      //           .push(MaterialPageRoute(builder: (context) => qrScanner()));
+      //     },
+      //   ),
+      // ),
+      /////////////////////////////////////////////////////////////////////////////
       // Center(
       //   child: Column(
       //     children: [
