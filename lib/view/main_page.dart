@@ -87,6 +87,19 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ],
               ),
+              Column(
+                children: [
+                  Card(
+                    child: Text('일괄처리'),
+                  ),
+                  Card(
+                    child: Text('수기처리'),
+                  ),
+                  Card(
+                    child: Text('출결현황'),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
