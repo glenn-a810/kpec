@@ -61,31 +61,60 @@ class _MainPageState extends State<MainPage> {
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Card(
-                    elevation: 5.0,
-                    child: IconButton(
-                      icon: Icon(Icons.qr_code_outlined),
-                      iconSize: 150,
-                      onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => qrScanner()));
-                      },
+                  Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.symmetric(horizontal: 30),
+                    margin: EdgeInsets.only(right: 16),
+                    decoration: BoxDecoration(
+                      color: Colors.white12,
+                      borderRadius: BorderRadius.circular(12),
                     ),
-                  ),
-                  Card(
-                    elevation: 5.0,
-                    child: IconButton(
-                      icon: Icon(Icons.qr_code_outlined),
-                      iconSize: 150,
-                      onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => qrScanner()));
-                      },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.qr_code,
+                          size: MediaQuery.of(context).size.width - 300,
+                        ),
+                        SizedBox(
+                          height: 12,
+                        ),
+                        Text(
+                          'QR입장',
+                          style: TextStyle(
+                            color: Colors.black54,
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ],
+                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                // children: [
+                //   Card(
+                //     elevation: 5.0,
+                //     child: IconButton(
+                //       icon: Icon(Icons.qr_code_outlined),
+                //       iconSize: 150,
+                //       onPressed: () {
+                //         Navigator.of(context).push(MaterialPageRoute(
+                //             builder: (context) => qrScanner()));
+                //       },
+                //     ),
+                //   ),
+                //   Card(
+                //     elevation: 5.0,
+                //     child: IconButton(
+                //       icon: Icon(Icons.qr_code_outlined),
+                //       iconSize: 150,
+                //       onPressed: () {
+                //         Navigator.of(context).push(MaterialPageRoute(
+                //             builder: (context) => qrScanner()));
+                //       },
+                //     ),
+                //   ),
+                // ],
               ),
               Column(
                 children: [
