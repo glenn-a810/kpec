@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kpec/view/login_page.dart';
-import 'package:kpec/view/main_page.dart';
+import 'package:kpec/screen/login_page.dart';
+import 'package:kpec/screen/main_page.dart';
 
 void main() {
   runApp(MaterialApp(

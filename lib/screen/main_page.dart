@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:kpec/view/qr_scanner.dart';
+import 'package:kpec/screen/qr_scanner.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key, this.initialData}) : super(key: key);
@@ -23,7 +23,7 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    // Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
     // final code = Navigator.push(
     //     context, MaterialPageRoute(builder: (context) => qrScanner()));
 
@@ -44,12 +44,18 @@ class _MainPageState extends State<MainPage> {
         child: Center(
           child: Column(
             children: [
+              SizedBox(
+                height: size.height * 0.02,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text('관리자 소속'),
                   Text('로그인 정보'),
                 ],
+              ),
+              SizedBox(
+                height: size.height * 0.02,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -59,6 +65,9 @@ class _MainPageState extends State<MainPage> {
                   Text('교육일자 정보'),
                   Text('교육시간 정보'),
                 ],
+              ),
+              SizedBox(
+                height: size.height * 0.02,
               ),
               Row(
                 children: [
@@ -75,10 +84,39 @@ class _MainPageState extends State<MainPage> {
                       children: [
                         Icon(
                           Icons.qr_code,
-                          size: MediaQuery.of(context).size.width - 300,
+                          // size: MediaQuery.of(context).size.width - 300,
+                          size: size.width * 0.4,
                         ),
                         SizedBox(
-                          height: 12,
+                          height: size.height * 0.001,
+                        ),
+                        Text(
+                          'QR입장',
+                          style: TextStyle(
+                            color: Colors.black54,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.symmetric(horizontal: 30),
+                    margin: EdgeInsets.only(right: 16),
+                    decoration: BoxDecoration(
+                      color: Colors.white12,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.qr_code,
+                          // size: MediaQuery.of(context).size.width - 300,
+                          size: size.width * 0.4,
+                        ),
+                        SizedBox(
+                          height: size.height * 0.001,
                         ),
                         Text(
                           'QR입장',
@@ -117,6 +155,7 @@ class _MainPageState extends State<MainPage> {
                 // ],
               ),
               Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Card(
                     child: Text('일괄처리'),
