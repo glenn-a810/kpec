@@ -128,31 +128,6 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ),
                 ],
-                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                // children: [
-                //   Card(
-                //     elevation: 5.0,
-                //     child: IconButton(
-                //       icon: Icon(Icons.qr_code_outlined),
-                //       iconSize: 150,
-                //       onPressed: () {
-                //         Navigator.of(context).push(MaterialPageRoute(
-                //             builder: (context) => qrScanner()));
-                //       },
-                //     ),
-                //   ),
-                //   Card(
-                //     elevation: 5.0,
-                //     child: IconButton(
-                //       icon: Icon(Icons.qr_code_outlined),
-                //       iconSize: 150,
-                //       onPressed: () {
-                //         Navigator.of(context).push(MaterialPageRoute(
-                //             builder: (context) => qrScanner()));
-                //       },
-                //     ),
-                //   ),
-                // ],
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
