@@ -116,12 +116,52 @@ class _MainPageState extends State<MainPage> {
                   top: size.height * 0.03,
                 ),
                 elevation: 4,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('title'),
-                    Text('contents'),
-                  ],
+                child: Padding(
+                  padding: EdgeInsets.all(size.width * 0.04),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('출결현황'),
+                      SizedBox(
+                        height: size.height * 0.02,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Column(
+                            children: [
+                              Text('1839'),
+                              Text('총원'),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Text('1809'),
+                              Text(
+                                '입장',
+                                style: TextStyle(color: Colors.blue),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Text('30'),
+                              Text(
+                                '미입장',
+                                style: TextStyle(color: Colors.red),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Text('0'),
+                              Text('퇴장'),
+                            ],
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
