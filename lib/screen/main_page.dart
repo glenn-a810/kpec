@@ -82,7 +82,7 @@ class _MainPageState extends State<MainPage> {
                 children: [
                   Card(
                     margin: EdgeInsets.only(
-                        top: size.height * 0.03, right: size.width * 0.01),
+                        top: size.height * 0.03, right: size.width * 0.02),
                     elevation: 4,
                     child: IconButton(
                       icon: Icon(Icons.qr_code_scanner),
@@ -95,7 +95,7 @@ class _MainPageState extends State<MainPage> {
                   ),
                   Card(
                     margin: EdgeInsets.only(
-                        top: size.height * 0.03, left: size.width * 0.01),
+                        top: size.height * 0.03, left: size.width * 0.02),
                     elevation: 4,
                     child: IconButton(
                       icon: Icon(Icons.qr_code_scanner),
@@ -107,6 +107,22 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ),
                 ],
+              ),
+            ),
+            SizedBox(
+              width: size.width * 0.85,
+              child: Card(
+                margin: EdgeInsets.only(
+                  top: size.height * 0.03,
+                ),
+                elevation: 4,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('title'),
+                    Text('contents'),
+                  ],
+                ),
               ),
             ),
           ],
