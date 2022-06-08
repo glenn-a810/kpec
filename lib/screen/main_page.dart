@@ -29,7 +29,12 @@ class _MainPageState extends State<MainPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('민방위 교육 출결 관리'),
+        elevation: 4,
+        backgroundColor: Colors.white,
+        title: Text(
+          '민방위 전자출결 관리',
+          style: TextStyle(color: Colors.black),
+        ),
         actions: [
           IconButton(
             onPressed: () {
@@ -41,110 +46,70 @@ class _MainPageState extends State<MainPage> {
         ],
       ),
       body: Container(
-        child: Center(
-          child: Column(
-            children: [
-              SizedBox(
-                height: size.height * 0.02,
+        alignment: Alignment.center,
+        child: Column(
+          children: [
+            SizedBox(
+              width: size.width * 0.85,
+              height: size.height * 0.18,
+              child: Card(
+                margin: EdgeInsets.only(
+                  top: size.height * 0.03,
+                ),
+                elevation: 4,
+                color: Colors.white,
+                child: Padding(
+                  padding: EdgeInsets.all(size.width * 0.04),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('루이 관리자님, 반갑습니다!'),
+                      SizedBox(
+                        height: size.height * 0.02,
+                      ),
+                      Text('2022년 6월 8일 수요일'),
+                      Text('오전 10시 00분 오전교육'),
+                      Text('판교테크노밸리 민방위교육장'),
+                    ],
+                  ),
+                ),
               ),
-              Row(
+            ),
+            SizedBox(
+              width: size.width * 0.85,
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text('관리자 소속'),
-                  Text('로그인 정보'),
-                ],
-              ),
-              SizedBox(
-                height: size.height * 0.02,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text('출결관련 정보'),
-                  Text('교육장 정보 표시'),
-                  Text('교육일자 정보'),
-                  Text('교육시간 정보'),
-                ],
-              ),
-              SizedBox(
-                height: size.height * 0.02,
-              ),
-              Row(
-                children: [
-                  Container(
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.symmetric(horizontal: 30),
-                    margin: EdgeInsets.only(right: 16),
-                    decoration: BoxDecoration(
-                      color: Colors.white12,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.qr_code,
-                          // size: MediaQuery.of(context).size.width - 300,
-                          size: size.width * 0.4,
-                        ),
-                        SizedBox(
-                          height: size.height * 0.001,
-                        ),
-                        Text(
-                          'QR입장',
-                          style: TextStyle(
-                            color: Colors.black54,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.symmetric(horizontal: 30),
-                    margin: EdgeInsets.only(right: 16),
-                    decoration: BoxDecoration(
-                      color: Colors.white12,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.qr_code,
-                          // size: MediaQuery.of(context).size.width - 300,
-                          size: size.width * 0.4,
-                        ),
-                        SizedBox(
-                          height: size.height * 0.001,
-                        ),
-                        Text(
-                          'QR입장',
-                          style: TextStyle(
-                            color: Colors.black54,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
                   Card(
-                    child: Text('일괄처리'),
+                    margin: EdgeInsets.only(
+                        top: size.height * 0.03, right: size.width * 0.01),
+                    elevation: 4,
+                    child: IconButton(
+                      icon: Icon(Icons.qr_code_scanner),
+                      iconSize: size.width * 0.3,
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => qrScanner()));
+                      },
+                    ),
                   ),
                   Card(
-                    child: Text('수기처리'),
-                  ),
-                  Card(
-                    child: Text('출결현황'),
+                    margin: EdgeInsets.only(
+                        top: size.height * 0.03, left: size.width * 0.01),
+                    elevation: 4,
+                    child: IconButton(
+                      icon: Icon(Icons.qr_code_scanner),
+                      iconSize: size.width * 0.3,
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => qrScanner()));
+                      },
+                    ),
                   ),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       /////////////////////////////////////////////////////////////////////////////
