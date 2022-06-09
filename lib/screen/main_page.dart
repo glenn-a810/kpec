@@ -127,6 +127,7 @@ class _MainPageState extends State<MainPage> {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        // 여기는 데이터를 https로 받아와서 함수로 저장하고 for문 돌려야 할 것 같은데, 더미데이터로 테스트 했는데 잘 안되네 왜지..
                         children: [
                           Column(
                             children: [
