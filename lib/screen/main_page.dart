@@ -127,7 +127,7 @@ class _MainPageState extends State<MainPage> {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        // 여기는 데이터를 https로 받아와서 함수로 저장하고 for문 돌려야 할 것 같은데, 더미데이터로 테스트 했는데 잘 안되네 왜지..
+                        // 여기는 데이터를 http로 받아와서 함수로 저장하고 for문 돌려야 할 것 같은데, 더미데이터로 테스트 했는데 잘 안되네 왜지..
                         children: [
                           Column(
                             children: [
@@ -161,6 +161,47 @@ class _MainPageState extends State<MainPage> {
                           ),
                         ],
                       )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: size.width * 0.85,
+              child: Card(
+                margin: EdgeInsets.only(top: size.height * 0.03),
+                elevation: 4,
+                child: Padding(
+                  padding: EdgeInsets.all(size.width * 0.04),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('퇴장코드 일괄처리'),
+                      SizedBox(
+                        height: size.height * 0.02,
+                      ),
+                      Center(
+                        child: Text('일괄처리 코드를 생산하시려면 여기를 터치하세요.'),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: size.width * 0.85,
+              child: Card(
+                margin: EdgeInsets.only(top: size.height * 0.03),
+                elevation: 4,
+                child: Padding(
+                  padding: EdgeInsets.all(size.width * 0.04),
+                  child: Row(
+                    children: [
+                      Icon(Icons.drive_file_rename_outline),
+                      SizedBox(
+                        width: size.width * 0.02,
+                      ),
+                      Text('수기처리'),
                     ],
                   ),
                 ),
