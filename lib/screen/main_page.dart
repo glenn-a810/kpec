@@ -207,6 +207,63 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
             ),
+            SizedBox(
+              width: size.width * 0.85,
+              child: Card(
+                margin: EdgeInsets.only(top: size.height * 0.03),
+                elevation: 4,
+                child: Padding(
+                  padding: EdgeInsets.all(size.width * 0.04),
+                  child: Row(
+                    children: [
+                      Icon(Icons.directions_run),
+                      SizedBox(
+                        width: size.width * 0.02,
+                      ),
+                      Text('미확인 대원처리'),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: size.width * 0.85,
+              child: Card(
+                margin: EdgeInsets.only(top: size.height * 0.03),
+                elevation: 4,
+                child: Padding(
+                  padding: EdgeInsets.all(size.width * 0.04),
+                  child: Row(
+                    children: [
+                      Icon(Icons.person_pin),
+                      SizedBox(
+                        width: size.width * 0.02,
+                      ),
+                      Text('현장등록 대원'),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: size.width * 0.85,
+              child: Card(
+                margin: EdgeInsets.only(top: size.height * 0.03),
+                elevation: 4,
+                child: Padding(
+                  padding: EdgeInsets.all(size.width * 0.04),
+                  child: Row(
+                    children: [
+                      Icon(Icons.event_available),
+                      SizedBox(
+                        width: size.width * 0.02,
+                      ),
+                      Text('출결현황'),
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
