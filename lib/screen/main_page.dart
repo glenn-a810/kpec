@@ -12,6 +12,8 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  int bottomIndex = 0; // 하단 네비게이션 인덱스
+
   @override
   void initState() {
     super.initState();
