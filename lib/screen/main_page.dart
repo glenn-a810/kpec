@@ -190,6 +190,8 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
             ),
+            // 스크롤 구현 시 simplescroll보다 listview가 성능상으로 더 나음. 근데 수정할 것들이 많음
+            ListView.builder(itemBuilder: itemBuilder),
             SizedBox(
               width: size.width * 0.85,
               child: Card(
