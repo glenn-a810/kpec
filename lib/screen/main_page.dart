@@ -308,41 +308,31 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-              color: Colors.black,
-            ),
+            icon: Icon(Icons.home),
             label: '메인',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.drive_file_rename_outline,
-              color: Colors.black,
-            ),
+            icon: Icon(Icons.drive_file_rename_outline),
             label: '수기처리',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.directions_run,
-              color: Colors.black,
-            ),
+            icon: Icon(Icons.directions_run),
             label: '미확인 대원처리',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person_pin,
-              color: Colors.black,
-            ),
+            icon: Icon(Icons.person_pin),
             label: '현장등록 대원',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.event_available,
-              color: Colors.black,
-            ),
+            icon: Icon(Icons.event_available),
             label: '출결현황',
           ),
         ],
+        showUnselectedLabels: true,
+        unselectedFontSize: 10.0,
+        unselectedItemColor: Colors.black38,
+        selectedFontSize: 10.0,
+        selectedItemColor: Colors.black,
       ),
     );
   }
