@@ -191,7 +191,7 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             // 스크롤 구현 시 simplescroll보다 listview가 성능상으로 더 나음. 근데 수정할 것들이 많음
-            ListView.builder(itemBuilder: itemBuilder),
+            // ListView.builder(itemBuilder: itemBuilder),
             SizedBox(
               width: size.width * 0.85,
               child: Card(
@@ -305,6 +305,45 @@ class _MainPageState extends State<MainPage> {
       //     ],
       //   ),
       // ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              color: Colors.black,
+            ),
+            label: '메인',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.drive_file_rename_outline,
+              color: Colors.black,
+            ),
+            label: '수기처리',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.directions_run,
+              color: Colors.black,
+            ),
+            label: '미확인 대원처리',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person_pin,
+              color: Colors.black,
+            ),
+            label: '현장등록 대원',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.event_available,
+              color: Colors.black,
+            ),
+            label: '출결현황',
+          ),
+        ],
+      ),
     );
   }
 }
