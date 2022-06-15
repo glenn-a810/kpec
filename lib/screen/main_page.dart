@@ -246,7 +246,10 @@ class _MainPageState extends State<MainPage> {
                 SizedBox(
                   width: size.width * 0.85,
                   child: Card(
-                    margin: EdgeInsets.only(top: size.height * 0.03),
+                    margin: EdgeInsets.only(
+                      top: size.height * 0.03,
+                      bottom: size.height * 0.04,
+                    ),
                     elevation: 4,
                     child: Padding(
                       padding: EdgeInsets.all(size.width * 0.04),
@@ -267,35 +270,78 @@ class _MainPageState extends State<MainPage> {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: '메인',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.drive_file_rename_outline),
-            label: '수기처리',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.directions_run),
-            label: '미확인 대원처리',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_pin),
-            label: '현장등록 대원',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.event_available),
-            label: '출결현황',
-          ),
-        ],
-        showUnselectedLabels: true,
-        unselectedFontSize: 10.0,
-        unselectedItemColor: Colors.black38,
-        selectedFontSize: 10.0,
-        selectedItemColor: Colors.black,
+      bottomNavigationBar: SizedBox(
+        height: 115,
+        child: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                size: 35,
+              ),
+              label: '메인',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.drive_file_rename_outline,
+                size: 35,
+              ),
+              label: '수기처리',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.directions_run,
+                size: 35,
+              ),
+              label: '미확인 대원처리',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person_pin,
+                size: 35,
+              ),
+              label: '현장등록 대원',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.event_available,
+                size: 35,
+              ),
+              label: '출결현황',
+            ),
+          ],
+          showUnselectedLabels: true,
+          unselectedFontSize: 10.0,
+          unselectedItemColor: Colors.black38,
+          selectedFontSize: 10.0,
+          selectedItemColor: Colors.black,
+        ),
       ),
+      // bottomNavigationBar: TabBar(
+      //   tabs: [
+      //     Tab(
+      //       icon: Icon(Icons.home),
+      //       text: '메인',
+      //     ),
+      //     Tab(
+      //       icon: Icon(Icons.drive_file_rename_outline),
+      //       text: '수기처리',
+      //     ),
+      //     Tab(
+      //       icon: Icon(Icons.directions_run),
+      //       text: '미확인 대원처리',
+      //     ),
+      //     Tab(
+      //       icon: Icon(Icons.person_pin),
+      //       text: '현장등록 대원',
+      //     ),
+      //     Tab(
+      //       icon: Icon(Icons.event_available),
+      //       text: '출결현황',
+      //     ),
+      //   ],
+      // ),
     );
   }
 }
