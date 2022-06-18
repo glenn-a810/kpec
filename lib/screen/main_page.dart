@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:kpec/screen/attend_status_page.dart';
+import 'package:kpec/screen/field_pass_page.dart';
+import 'package:kpec/screen/manual_pass_page.dart';
 import 'package:kpec/screen/qr_scanner.dart';
+import 'package:kpec/screen/unconfirmed_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key, this.initialData}) : super(key: key);
@@ -24,8 +28,20 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    // final code = Navigator.push(
-    //     context, MaterialPageRoute(builder: (context) => qrScanner()));
+    int _currentIndex = 0;
+    final List<Widget> _subPage = [
+      MainPage(),
+      ManualPass(),
+      Unconfirmed(),
+      FieldPass(),
+      AttendStatus()
+    ];
+
+    void _onTap(int index) {
+      setState(() {
+        _currentIndex = index;
+      });
+    }
 
     return Scaffold(
       appBar: AppBar(
@@ -273,6 +289,8 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: SizedBox(
         height: 115,
         child: BottomNavigationBar(
+          onTap: _onTap,
+          currentIndex: _currentIndex,
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
