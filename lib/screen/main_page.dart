@@ -22,6 +22,7 @@ class _MainPageState extends State<MainPage> {
     initializeDateFormatting();
     Future.delayed(Duration.zero, () {
       _showDialog(context);
+      _main(context);
     });
   }
 
@@ -30,7 +31,7 @@ class _MainPageState extends State<MainPage> {
     // Size size = MediaQuery.of(context).size;
     int _currentIndex = 0;
     final List<Widget> _subPage = [
-      MainPage(),
+      _main(),
       ManualPass(),
       Unconfirmed(),
       FieldPass(),
@@ -140,234 +141,235 @@ class _MainPageState extends State<MainPage> {
   }
 }
 
-void Main(BuildContext context) {
+void _main(context) {
   Size size = MediaQuery.of(context).size;
+  print(size);
 
-  ListView(
-    children: [
-      Container(
-        alignment: Alignment.center,
-        child: Column(
-          children: [
-            SizedBox(
-              width: size.width * 0.85,
-              height: size.height * 0.18,
-              child: Card(
-                margin: EdgeInsets.only(top: size.height * 0.03),
-                elevation: 4,
-                color: Colors.white,
-                child: Padding(
-                  padding: EdgeInsets.all(size.width * 0.04),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('루이 관리자님, 반갑습니다!'),
-                      SizedBox(height: size.height * 0.02),
-                      Text('2022년 6월 8일 수요일'),
-                      Text('오전 10시 00분 오전교육'),
-                      Text('판교테크노밸리 민방위교육장'),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              width: size.width * 0.85,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Card(
-                    margin: EdgeInsets.only(
-                        top: size.height * 0.03, right: size.width * 0.02),
-                    elevation: 4,
-                    child: IconButton(
-                      icon: Icon(Icons.qr_code_scanner),
-                      iconSize: size.width * 0.3,
-                      onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => qrScanner()));
-                      },
-                    ),
-                  ),
-                  Card(
-                    margin: EdgeInsets.only(
-                        top: size.height * 0.03, left: size.width * 0.02),
-                    elevation: 4,
-                    child: IconButton(
-                      icon: Icon(Icons.qr_code_scanner),
-                      iconSize: size.width * 0.3,
-                      onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => qrScanner()));
-                      },
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              width: size.width * 0.85,
-              child: Card(
-                margin: EdgeInsets.only(
-                  top: size.height * 0.03,
-                ),
-                elevation: 4,
-                child: Padding(
-                  padding: EdgeInsets.all(size.width * 0.04),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('출결현황'),
-                      SizedBox(
-                        height: size.height * 0.02,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        // 여기는 데이터를 http로 받아와서 함수로 저장하고 for문 돌려야 할 것 같은데, 더미데이터로 테스트 했는데 잘 안되네 왜지..
-                        children: [
-                          Column(
-                            children: [
-                              Text('1839'),
-                              Text('총원'),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Text('1809'),
-                              Text(
-                                '입장',
-                                style: TextStyle(color: Colors.blue),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Text('30'),
-                              Text(
-                                '미입장',
-                                style: TextStyle(color: Colors.red),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            children: [
-                              Text('0'),
-                              Text('퇴장'),
-                            ],
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              width: size.width * 0.85,
-              child: Card(
-                margin: EdgeInsets.only(top: size.height * 0.03),
-                elevation: 4,
-                child: Padding(
-                  padding: EdgeInsets.all(size.width * 0.04),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('퇴장코드 일괄처리'),
-                      SizedBox(
-                        height: size.height * 0.02,
-                      ),
-                      Center(
-                        child: Text('일괄처리 코드를 생산하시려면 여기를 터치하세요.'),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              width: size.width * 0.85,
-              child: Card(
-                margin: EdgeInsets.only(top: size.height * 0.03),
-                elevation: 4,
-                child: Padding(
-                  padding: EdgeInsets.all(size.width * 0.04),
-                  child: Row(
-                    children: [
-                      Icon(Icons.drive_file_rename_outline),
-                      SizedBox(
-                        width: size.width * 0.02,
-                      ),
-                      Text('수기처리'),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              width: size.width * 0.85,
-              child: Card(
-                margin: EdgeInsets.only(top: size.height * 0.03),
-                elevation: 4,
-                child: Padding(
-                  padding: EdgeInsets.all(size.width * 0.04),
-                  child: Row(
-                    children: [
-                      Icon(Icons.directions_run),
-                      SizedBox(
-                        width: size.width * 0.02,
-                      ),
-                      Text('미확인 대원처리'),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              width: size.width * 0.85,
-              child: Card(
-                margin: EdgeInsets.only(top: size.height * 0.03),
-                elevation: 4,
-                child: Padding(
-                  padding: EdgeInsets.all(size.width * 0.04),
-                  child: Row(
-                    children: [
-                      Icon(Icons.person_pin),
-                      SizedBox(
-                        width: size.width * 0.02,
-                      ),
-                      Text('현장등록 대원'),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              width: size.width * 0.85,
-              child: Card(
-                margin: EdgeInsets.only(
-                  top: size.height * 0.03,
-                  bottom: size.height * 0.04,
-                ),
-                elevation: 4,
-                child: Padding(
-                  padding: EdgeInsets.all(size.width * 0.04),
-                  child: Row(
-                    children: [
-                      Icon(Icons.event_available),
-                      SizedBox(
-                        width: size.width * 0.02,
-                      ),
-                      Text('출결현황'),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    ],
-  );
+  // ListView(
+  //   children: [
+  //     Container(
+  //       alignment: Alignment.center,
+  //       child: Column(
+  //         children: [
+  //           SizedBox(
+  //             width: size.width * 0.85,
+  //             height: size.height * 0.18,
+  //             child: Card(
+  //               margin: EdgeInsets.only(top: size.height * 0.03),
+  //               elevation: 4,
+  //               color: Colors.white,
+  //               child: Padding(
+  //                 padding: EdgeInsets.all(size.width * 0.04),
+  //                 child: Column(
+  //                   crossAxisAlignment: CrossAxisAlignment.start,
+  //                   children: [
+  //                     Text('루이 관리자님, 반갑습니다!'),
+  //                     SizedBox(height: size.height * 0.02),
+  //                     Text('2022년 6월 8일 수요일'),
+  //                     Text('오전 10시 00분 오전교육'),
+  //                     Text('판교테크노밸리 민방위교육장'),
+  //                   ],
+  //                 ),
+  //               ),
+  //             ),
+  //           ),
+  //           SizedBox(
+  //             width: size.width * 0.85,
+  //             child: Row(
+  //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  //               children: [
+  //                 Card(
+  //                   margin: EdgeInsets.only(
+  //                       top: size.height * 0.03, right: size.width * 0.02),
+  //                   elevation: 4,
+  //                   child: IconButton(
+  //                     icon: Icon(Icons.qr_code_scanner),
+  //                     iconSize: size.width * 0.3,
+  //                     onPressed: () {
+  //                       Navigator.of(context).push(MaterialPageRoute(
+  //                           builder: (context) => qrScanner()));
+  //                     },
+  //                   ),
+  //                 ),
+  //                 Card(
+  //                   margin: EdgeInsets.only(
+  //                       top: size.height * 0.03, left: size.width * 0.02),
+  //                   elevation: 4,
+  //                   child: IconButton(
+  //                     icon: Icon(Icons.qr_code_scanner),
+  //                     iconSize: size.width * 0.3,
+  //                     onPressed: () {
+  //                       Navigator.of(context).push(MaterialPageRoute(
+  //                           builder: (context) => qrScanner()));
+  //                     },
+  //                   ),
+  //                 ),
+  //               ],
+  //             ),
+  //           ),
+  //           SizedBox(
+  //             width: size.width * 0.85,
+  //             child: Card(
+  //               margin: EdgeInsets.only(
+  //                 top: size.height * 0.03,
+  //               ),
+  //               elevation: 4,
+  //               child: Padding(
+  //                 padding: EdgeInsets.all(size.width * 0.04),
+  //                 child: Column(
+  //                   crossAxisAlignment: CrossAxisAlignment.start,
+  //                   children: [
+  //                     Text('출결현황'),
+  //                     SizedBox(
+  //                       height: size.height * 0.02,
+  //                     ),
+  //                     Row(
+  //                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  //                       // 여기는 데이터를 http로 받아와서 함수로 저장하고 for문 돌려야 할 것 같은데, 더미데이터로 테스트 했는데 잘 안되네 왜지..
+  //                       children: [
+  //                         Column(
+  //                           children: [
+  //                             Text('1839'),
+  //                             Text('총원'),
+  //                           ],
+  //                         ),
+  //                         Column(
+  //                           children: [
+  //                             Text('1809'),
+  //                             Text(
+  //                               '입장',
+  //                               style: TextStyle(color: Colors.blue),
+  //                             ),
+  //                           ],
+  //                         ),
+  //                         Column(
+  //                           children: [
+  //                             Text('30'),
+  //                             Text(
+  //                               '미입장',
+  //                               style: TextStyle(color: Colors.red),
+  //                             ),
+  //                           ],
+  //                         ),
+  //                         Column(
+  //                           children: [
+  //                             Text('0'),
+  //                             Text('퇴장'),
+  //                           ],
+  //                         ),
+  //                       ],
+  //                     )
+  //                   ],
+  //                 ),
+  //               ),
+  //             ),
+  //           ),
+  //           SizedBox(
+  //             width: size.width * 0.85,
+  //             child: Card(
+  //               margin: EdgeInsets.only(top: size.height * 0.03),
+  //               elevation: 4,
+  //               child: Padding(
+  //                 padding: EdgeInsets.all(size.width * 0.04),
+  //                 child: Column(
+  //                   crossAxisAlignment: CrossAxisAlignment.start,
+  //                   children: [
+  //                     Text('퇴장코드 일괄처리'),
+  //                     SizedBox(
+  //                       height: size.height * 0.02,
+  //                     ),
+  //                     Center(
+  //                       child: Text('일괄처리 코드를 생산하시려면 여기를 터치하세요.'),
+  //                     ),
+  //                   ],
+  //                 ),
+  //               ),
+  //             ),
+  //           ),
+  //           SizedBox(
+  //             width: size.width * 0.85,
+  //             child: Card(
+  //               margin: EdgeInsets.only(top: size.height * 0.03),
+  //               elevation: 4,
+  //               child: Padding(
+  //                 padding: EdgeInsets.all(size.width * 0.04),
+  //                 child: Row(
+  //                   children: [
+  //                     Icon(Icons.drive_file_rename_outline),
+  //                     SizedBox(
+  //                       width: size.width * 0.02,
+  //                     ),
+  //                     Text('수기처리'),
+  //                   ],
+  //                 ),
+  //               ),
+  //             ),
+  //           ),
+  //           SizedBox(
+  //             width: size.width * 0.85,
+  //             child: Card(
+  //               margin: EdgeInsets.only(top: size.height * 0.03),
+  //               elevation: 4,
+  //               child: Padding(
+  //                 padding: EdgeInsets.all(size.width * 0.04),
+  //                 child: Row(
+  //                   children: [
+  //                     Icon(Icons.directions_run),
+  //                     SizedBox(
+  //                       width: size.width * 0.02,
+  //                     ),
+  //                     Text('미확인 대원처리'),
+  //                   ],
+  //                 ),
+  //               ),
+  //             ),
+  //           ),
+  //           SizedBox(
+  //             width: size.width * 0.85,
+  //             child: Card(
+  //               margin: EdgeInsets.only(top: size.height * 0.03),
+  //               elevation: 4,
+  //               child: Padding(
+  //                 padding: EdgeInsets.all(size.width * 0.04),
+  //                 child: Row(
+  //                   children: [
+  //                     Icon(Icons.person_pin),
+  //                     SizedBox(
+  //                       width: size.width * 0.02,
+  //                     ),
+  //                     Text('현장등록 대원'),
+  //                   ],
+  //                 ),
+  //               ),
+  //             ),
+  //           ),
+  //           SizedBox(
+  //             width: size.width * 0.85,
+  //             child: Card(
+  //               margin: EdgeInsets.only(
+  //                 top: size.height * 0.03,
+  //                 bottom: size.height * 0.04,
+  //               ),
+  //               elevation: 4,
+  //               child: Padding(
+  //                 padding: EdgeInsets.all(size.width * 0.04),
+  //                 child: Row(
+  //                   children: [
+  //                     Icon(Icons.event_available),
+  //                     SizedBox(
+  //                       width: size.width * 0.02,
+  //                     ),
+  //                     Text('출결현황'),
+  //                   ],
+  //                 ),
+  //               ),
+  //             ),
+  //           ),
+  //         ],
+  //       ),
+  //     ),
+  //   ],
+  // );
 }
 
 void _showDialog(context) {
