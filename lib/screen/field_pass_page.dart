@@ -10,6 +10,8 @@ class FieldPass extends StatefulWidget {
 class _FieldPassState extends State<FieldPass> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Text('현장등록대원'),
+    );
   }
 }

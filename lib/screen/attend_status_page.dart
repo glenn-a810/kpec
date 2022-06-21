@@ -10,6 +10,8 @@ class AttendStatus extends StatefulWidget {
 class _AttendStatusState extends State<AttendStatus> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Text('출결현황'),
+    );
   }
 }

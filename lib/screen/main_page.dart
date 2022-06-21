@@ -16,6 +16,8 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  int _currentIndex = 0;
+
   @override
   void initState() {
     super.initState();
@@ -25,10 +27,16 @@ class _MainPageState extends State<MainPage> {
     });
   }
 
+  void _onTap(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // Size size = MediaQuery.of(context).size;
-    int _currentIndex = 0;
+    // int _currentIndex = 0;
     final List<Widget> _subPage = [
       _main(),
       ManualPass(),
@@ -36,12 +44,6 @@ class _MainPageState extends State<MainPage> {
       FieldPass(),
       AttendStatus()
     ];
-
-    void _onTap(int index) {
-      setState(() {
-        _currentIndex = index;
-      });
-    }
 
     return Scaffold(
       appBar: AppBar(
@@ -160,7 +162,7 @@ class _mainState extends State<_main> {
           child: Column(
             children: [
               SizedBox(
-                width: size.width * 0.85,
+                width: size.width * 0.9,
                 height: size.height * 0.18,
                 child: Card(
                   margin: EdgeInsets.only(top: size.height * 0.03),
@@ -182,7 +184,7 @@ class _mainState extends State<_main> {
                 ),
               ),
               SizedBox(
-                width: size.width * 0.85,
+                width: size.width * 0.9,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -216,7 +218,7 @@ class _mainState extends State<_main> {
                 ),
               ),
               SizedBox(
-                width: size.width * 0.85,
+                width: size.width * 0.9,
                 child: Card(
                   margin: EdgeInsets.only(
                     top: size.height * 0.03,
@@ -273,7 +275,7 @@ class _mainState extends State<_main> {
                 ),
               ),
               SizedBox(
-                width: size.width * 0.85,
+                width: size.width * 0.9,
                 child: Card(
                   margin: EdgeInsets.only(top: size.height * 0.03),
                   elevation: 4,
@@ -295,7 +297,7 @@ class _mainState extends State<_main> {
                 ),
               ),
               SizedBox(
-                width: size.width * 0.85,
+                width: size.width * 0.9,
                 child: Card(
                   margin: EdgeInsets.only(top: size.height * 0.03),
                   elevation: 4,
@@ -314,7 +316,7 @@ class _mainState extends State<_main> {
                 ),
               ),
               SizedBox(
-                width: size.width * 0.85,
+                width: size.width * 0.9,
                 child: Card(
                   margin: EdgeInsets.only(top: size.height * 0.03),
                   elevation: 4,
@@ -333,7 +335,7 @@ class _mainState extends State<_main> {
                 ),
               ),
               SizedBox(
-                width: size.width * 0.85,
+                width: size.width * 0.9,
                 child: Card(
                   margin: EdgeInsets.only(top: size.height * 0.03),
                   elevation: 4,
@@ -352,7 +354,7 @@ class _mainState extends State<_main> {
                 ),
               ),
               SizedBox(
-                width: size.width * 0.85,
+                width: size.width * 0.9,
                 child: Card(
                   margin: EdgeInsets.only(
                     top: size.height * 0.03,

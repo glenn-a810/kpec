@@ -10,6 +10,8 @@ class Unconfirmed extends StatefulWidget {
 class _UnconfirmedState extends State<Unconfirmed> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Text('미확인 대원처리'),
+    );
   }
 }
