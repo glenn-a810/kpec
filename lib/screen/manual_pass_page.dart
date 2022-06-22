@@ -290,7 +290,7 @@ class _ManualPassState extends State<ManualPass> {
                   ),
                   child: ExpansionTile(
                     leading: Icon(Icons.person),
-                    title: Text('유관우 / 010-1234-1234'),
+                    title: Text('유관우 ( 010-1234-1234 )'),
                     textColor: Colors.black87,
                     iconColor: Colors.black87,
                     children: [
@@ -368,7 +368,85 @@ class _ManualPassState extends State<ManualPass> {
                   ),
                   child: ExpansionTile(
                     leading: Icon(Icons.person),
-                    title: Text('유관우 / 010-1234-1234'),
+                    title: Text('유관우 ( 010-1234-1234 )'),
+                    textColor: Colors.black87,
+                    iconColor: Colors.black87,
+                    children: [
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          ListTile(
+                            title: Text('1990-01-01'),
+                            subtitle: Text('북가좌2동'),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('입장'),
+                                style: TextButton.styleFrom(
+                                    primary: Colors.white,
+                                    backgroundColor: Color(0xFF325DA5),
+                                    fixedSize: Size(size.width * 0.42, 30)),
+                              ),
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('퇴장'),
+                                style: TextButton.styleFrom(
+                                    primary: Colors.white,
+                                    backgroundColor: Color(0xFFDA1317),
+                                    fixedSize: Size(size.width * 0.42, 30)),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  // Column(
+                  //   mainAxisSize: MainAxisSize.min,
+                  //   children: [
+                  //     ListTile(
+                  //       title: Text('유관우 / 010-1234-1234'),
+                  //       subtitle: Text('1990-01-01 / 북가좌2동'),
+                  //     ),
+                  //     ButtonBar(
+                  //       children: [
+                  //         TextButton(
+                  //           onPressed: () {},
+                  //           child: Text('입장'),
+                  //           style: TextButton.styleFrom(
+                  //             primary: Colors.white,
+                  //             backgroundColor: Colors.green,
+                  //           ),
+                  //         ),
+                  //         TextButton(
+                  //           onPressed: () {},
+                  //           child: Text('퇴장'),
+                  //           style: TextButton.styleFrom(
+                  //             primary: Colors.white,
+                  //             backgroundColor: Colors.redAccent,
+                  //           ),
+                  //         )
+                  //       ],
+                  //     ),
+                  //   ],
+                  // ),
+                ),
+              ),
+              SizedBox(
+                width: size.width * 0.9,
+                child: Card(
+                  elevation: 2,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10.0),
+                    ),
+                  ),
+                  child: ExpansionTile(
+                    leading: Icon(Icons.person),
+                    title: Text('유관우 ( 010-1234-1234 )'),
                     textColor: Colors.black87,
                     iconColor: Colors.black87,
                     children: [
