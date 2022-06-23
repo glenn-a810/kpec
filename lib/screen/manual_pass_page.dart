@@ -73,663 +73,663 @@ class _ManualPassState extends State<ManualPass> {
               SizedBox(
                 height: size.height * 0.03,
               ),
+              // SizedBox(
+              //   width: size.width * 0.9,
+              //   child: Card(
+              //     elevation: 4,
+              //     shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.all(
+              //         Radius.circular(10.0),
+              //       ),
+              //     ),
+              //     child: Column(
+              //       mainAxisSize: MainAxisSize.min,
+              //       children: [
+              //         ListTile(
+              //           leading: Icon(
+              //             Icons.person,
+              //             size: 40,
+              //             color: Color(0xFF325DA5),
+              //           ),
+              //           title: Text(
+              //             '유관우',
+              //             style: TextStyle(
+              //               fontSize: 18,
+              //               fontWeight: FontWeight.w400,
+              //             ),
+              //           ),
+              //           subtitle: Text('1990-01-01 / 북가좌2동 / 010-1234-1234'),
+              //         ),
+              //         ButtonBar(
+              //           children: [
+              //             TextButton(
+              //               onPressed: () {},
+              //               child: Text('입장'),
+              //               style: TextButton.styleFrom(
+              //                 primary: Colors.white,
+              //                 backgroundColor: Color(0xFF325DA5),
+              //               ),
+              //             ),
+              //             TextButton(
+              //               onPressed: () {},
+              //               child: Text('퇴장'),
+              //               style: TextButton.styleFrom(
+              //                 primary: Colors.white,
+              //                 backgroundColor: Color(0xFFDA1317),
+              //               ),
+              //             ),
+              //           ],
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
+              // SizedBox(
+              //   width: size.width * 0.9,
+              //   child: Card(
+              //     elevation: 4,
+              //     shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.all(
+              //         Radius.circular(10.0),
+              //       ),
+              //     ),
+              //     child: Column(
+              //       mainAxisSize: MainAxisSize.min,
+              //       children: [
+              //         ListTile(
+              //           leading: Icon(
+              //             Icons.person,
+              //             size: 40,
+              //             color: Color(0xFFDA1317),
+              //           ),
+              //           title: Text(
+              //             '유관우',
+              //             style: TextStyle(
+              //               fontSize: 18,
+              //               fontWeight: FontWeight.w400,
+              //             ),
+              //           ),
+              //           subtitle: Text('1990-01-01 / 북가좌2동 / 010-1234-1234'),
+              //         ),
+              //         // Row(
+              //         //   mainAxisAlignment: MainAxisAlignment.end,
+              //         //   children: [
+              //         //     ElevatedButton(
+              //         //       style: ElevatedButton.styleFrom(
+              //         //         primary: Colors.green,
+              //         //       ),
+              //         //       child: Text('입장'),
+              //         //       onPressed: () {},
+              //         //     ),
+              //         //     ElevatedButton(
+              //         //       style: ElevatedButton.styleFrom(
+              //         //         primary: Colors.redAccent,
+              //         //       ),
+              //         //       child: Text('퇴장'),
+              //         //       onPressed: () {},
+              //         //     ),
+              //         //   ],
+              //         // ),
+              //         ButtonBar(
+              //           children: [
+              //             TextButton(
+              //               onPressed: () {},
+              //               child: Text('입장'),
+              //               style: TextButton.styleFrom(
+              //                 primary: Colors.white,
+              //                 backgroundColor: Color(0xFF325DA5),
+              //               ),
+              //             ),
+              //             TextButton(
+              //               onPressed: () {},
+              //               child: Text('퇴장'),
+              //               style: TextButton.styleFrom(
+              //                 primary: Colors.white,
+              //                 backgroundColor: Color(0xFFD9D9D9),
+              //               ),
+              //             ),
+              //           ],
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
+              // SizedBox(
+              //   width: size.width * 0.9,
+              //   child: Card(
+              //     elevation: 4,
+              //     shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.all(
+              //         Radius.circular(10.0),
+              //       ),
+              //     ),
+              //     child: Column(
+              //       mainAxisSize: MainAxisSize.min,
+              //       children: [
+              //         ListTile(
+              //           leading: Icon(
+              //             Icons.person,
+              //             size: 40,
+              //             color: Color(0xFFD9D9D9),
+              //           ),
+              //           title: Text(
+              //             '유관우',
+              //             style: TextStyle(
+              //               fontSize: 18,
+              //               fontWeight: FontWeight.w400,
+              //             ),
+              //           ),
+              //           subtitle: Text('1990-01-01 / 북가좌2동 / 010-1234-1234'),
+              //         ),
+              //         // Row(
+              //         //   mainAxisAlignment: MainAxisAlignment.end,
+              //         //   children: [
+              //         //     ElevatedButton(
+              //         //       style: ElevatedButton.styleFrom(
+              //         //         primary: Colors.green,
+              //         //       ),
+              //         //       child: Text('입장'),
+              //         //       onPressed: () {},
+              //         //     ),
+              //         //     ElevatedButton(
+              //         //       style: ElevatedButton.styleFrom(
+              //         //         primary: Colors.redAccent,
+              //         //       ),
+              //         //       child: Text('퇴장'),
+              //         //       onPressed: () {},
+              //         //     ),
+              //         //   ],
+              //         // ),
+              //         ButtonBar(
+              //           children: [
+              //             ElevatedButton(
+              //               onPressed: () {},
+              //               child: Text('입장'),
+              //               style: ElevatedButton.styleFrom(
+              //                 primary: Color(0xFFD9D9D9),
+              //               ),
+              //             ),
+              //             ElevatedButton(
+              //               onPressed: () {},
+              //               child: Text('퇴장'),
+              //               style: ElevatedButton.styleFrom(
+              //                 primary: Color(0xFFDA1317),
+              //               ),
+              //             ),
+              //           ],
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
               SizedBox(
                 width: size.width * 0.9,
                 child: Card(
-                  elevation: 4,
+                  elevation: 2,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10.0),
                     ),
                   ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
+                  child: ExpansionTile(
+                    leading: Icon(Icons.person),
+                    title: Text('유관우 ( 010-1234-1234 )'),
+                    textColor: Colors.black87,
+                    iconColor: Colors.black87,
                     children: [
-                      ListTile(
-                        leading: Icon(
-                          Icons.person,
-                          size: 40,
-                          color: Color(0xFF325DA5),
-                        ),
-                        title: Text(
-                          '유관우',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                        subtitle: Text('1990-01-01 / 북가좌2동 / 010-1234-1234'),
-                      ),
-                      ButtonBar(
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
                         children: [
-                          TextButton(
-                            onPressed: () {},
-                            child: Text('입장'),
-                            style: TextButton.styleFrom(
-                              primary: Colors.white,
-                              backgroundColor: Color(0xFF325DA5),
-                            ),
+                          ListTile(
+                            title: Text('1990-01-01'),
+                            subtitle: Text('북가좌2동'),
                           ),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text('퇴장'),
-                            style: TextButton.styleFrom(
-                              primary: Colors.white,
-                              backgroundColor: Color(0xFFDA1317),
-                            ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('입장'),
+                                style: TextButton.styleFrom(
+                                    primary: Colors.white,
+                                    backgroundColor: Color(0xFF325DA5),
+                                    fixedSize: Size(size.width * 0.42, 30)),
+                              ),
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('퇴장'),
+                                style: TextButton.styleFrom(
+                                    primary: Colors.white,
+                                    backgroundColor: Color(0xFFDA1317),
+                                    fixedSize: Size(size.width * 0.42, 30)),
+                              ),
+                            ],
                           ),
                         ],
                       ),
                     ],
                   ),
+                  // Column(
+                  //   mainAxisSize: MainAxisSize.min,
+                  //   children: [
+                  //     ListTile(
+                  //       title: Text('유관우 / 010-1234-1234'),
+                  //       subtitle: Text('1990-01-01 / 북가좌2동'),
+                  //     ),
+                  //     ButtonBar(
+                  //       children: [
+                  //         TextButton(
+                  //           onPressed: () {},
+                  //           child: Text('입장'),
+                  //           style: TextButton.styleFrom(
+                  //             primary: Colors.white,
+                  //             backgroundColor: Colors.green,
+                  //           ),
+                  //         ),
+                  //         TextButton(
+                  //           onPressed: () {},
+                  //           child: Text('퇴장'),
+                  //           style: TextButton.styleFrom(
+                  //             primary: Colors.white,
+                  //             backgroundColor: Colors.redAccent,
+                  //           ),
+                  //         )
+                  //       ],
+                  //     ),
+                  //   ],
+                  // ),
                 ),
               ),
               SizedBox(
                 width: size.width * 0.9,
                 child: Card(
-                  elevation: 4,
+                  elevation: 2,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10.0),
                     ),
                   ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
+                  child: ExpansionTile(
+                    leading: Icon(Icons.person),
+                    title: Text('유관우 ( 010-1234-1234 )'),
+                    textColor: Colors.black87,
+                    iconColor: Colors.black87,
                     children: [
-                      ListTile(
-                        leading: Icon(
-                          Icons.person,
-                          size: 40,
-                          color: Color(0xFFDA1317),
-                        ),
-                        title: Text(
-                          '유관우',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                        subtitle: Text('1990-01-01 / 북가좌2동 / 010-1234-1234'),
-                      ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.end,
-                      //   children: [
-                      //     ElevatedButton(
-                      //       style: ElevatedButton.styleFrom(
-                      //         primary: Colors.green,
-                      //       ),
-                      //       child: Text('입장'),
-                      //       onPressed: () {},
-                      //     ),
-                      //     ElevatedButton(
-                      //       style: ElevatedButton.styleFrom(
-                      //         primary: Colors.redAccent,
-                      //       ),
-                      //       child: Text('퇴장'),
-                      //       onPressed: () {},
-                      //     ),
-                      //   ],
-                      // ),
-                      ButtonBar(
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
                         children: [
-                          TextButton(
-                            onPressed: () {},
-                            child: Text('입장'),
-                            style: TextButton.styleFrom(
-                              primary: Colors.white,
-                              backgroundColor: Color(0xFF325DA5),
-                            ),
+                          ListTile(
+                            title: Text('1990-01-01'),
+                            subtitle: Text('북가좌2동'),
                           ),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text('퇴장'),
-                            style: TextButton.styleFrom(
-                              primary: Colors.white,
-                              backgroundColor: Color(0xFFD9D9D9),
-                            ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('입장'),
+                                style: TextButton.styleFrom(
+                                    primary: Colors.white,
+                                    backgroundColor: Color(0xFF325DA5),
+                                    fixedSize: Size(size.width * 0.42, 30)),
+                              ),
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('퇴장'),
+                                style: TextButton.styleFrom(
+                                    primary: Colors.white,
+                                    backgroundColor: Color(0xFFDA1317),
+                                    fixedSize: Size(size.width * 0.42, 30)),
+                              ),
+                            ],
                           ),
                         ],
                       ),
                     ],
                   ),
+                  // Column(
+                  //   mainAxisSize: MainAxisSize.min,
+                  //   children: [
+                  //     ListTile(
+                  //       title: Text('유관우 / 010-1234-1234'),
+                  //       subtitle: Text('1990-01-01 / 북가좌2동'),
+                  //     ),
+                  //     ButtonBar(
+                  //       children: [
+                  //         TextButton(
+                  //           onPressed: () {},
+                  //           child: Text('입장'),
+                  //           style: TextButton.styleFrom(
+                  //             primary: Colors.white,
+                  //             backgroundColor: Colors.green,
+                  //           ),
+                  //         ),
+                  //         TextButton(
+                  //           onPressed: () {},
+                  //           child: Text('퇴장'),
+                  //           style: TextButton.styleFrom(
+                  //             primary: Colors.white,
+                  //             backgroundColor: Colors.redAccent,
+                  //           ),
+                  //         )
+                  //       ],
+                  //     ),
+                  //   ],
+                  // ),
                 ),
               ),
               SizedBox(
                 width: size.width * 0.9,
                 child: Card(
-                  elevation: 4,
+                  elevation: 2,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10.0),
                     ),
                   ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
+                  child: ExpansionTile(
+                    leading: Icon(Icons.person),
+                    title: Text('유관우 ( 010-1234-1234 )'),
+                    textColor: Colors.black87,
+                    iconColor: Colors.black87,
                     children: [
-                      ListTile(
-                        leading: Icon(
-                          Icons.person,
-                          size: 40,
-                          color: Color(0xFFD9D9D9),
-                        ),
-                        title: Text(
-                          '유관우',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                        subtitle: Text('1990-01-01 / 북가좌2동 / 010-1234-1234'),
-                      ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.end,
-                      //   children: [
-                      //     ElevatedButton(
-                      //       style: ElevatedButton.styleFrom(
-                      //         primary: Colors.green,
-                      //       ),
-                      //       child: Text('입장'),
-                      //       onPressed: () {},
-                      //     ),
-                      //     ElevatedButton(
-                      //       style: ElevatedButton.styleFrom(
-                      //         primary: Colors.redAccent,
-                      //       ),
-                      //       child: Text('퇴장'),
-                      //       onPressed: () {},
-                      //     ),
-                      //   ],
-                      // ),
-                      ButtonBar(
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
                         children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('입장'),
-                            style: ElevatedButton.styleFrom(
-                              primary: Color(0xFFD9D9D9),
-                            ),
+                          ListTile(
+                            title: Text('1990-01-01'),
+                            subtitle: Text('북가좌2동'),
                           ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('퇴장'),
-                            style: ElevatedButton.styleFrom(
-                              primary: Color(0xFFDA1317),
-                            ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('입장'),
+                                style: TextButton.styleFrom(
+                                    primary: Colors.white,
+                                    backgroundColor: Color(0xFF325DA5),
+                                    fixedSize: Size(size.width * 0.42, 30)),
+                              ),
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('퇴장'),
+                                style: TextButton.styleFrom(
+                                    primary: Colors.white,
+                                    backgroundColor: Color(0xFFDA1317),
+                                    fixedSize: Size(size.width * 0.42, 30)),
+                              ),
+                            ],
                           ),
                         ],
                       ),
                     ],
                   ),
+                  // Column(
+                  //   mainAxisSize: MainAxisSize.min,
+                  //   children: [
+                  //     ListTile(
+                  //       title: Text('유관우 / 010-1234-1234'),
+                  //       subtitle: Text('1990-01-01 / 북가좌2동'),
+                  //     ),
+                  //     ButtonBar(
+                  //       children: [
+                  //         TextButton(
+                  //           onPressed: () {},
+                  //           child: Text('입장'),
+                  //           style: TextButton.styleFrom(
+                  //             primary: Colors.white,
+                  //             backgroundColor: Colors.green,
+                  //           ),
+                  //         ),
+                  //         TextButton(
+                  //           onPressed: () {},
+                  //           child: Text('퇴장'),
+                  //           style: TextButton.styleFrom(
+                  //             primary: Colors.white,
+                  //             backgroundColor: Colors.redAccent,
+                  //           ),
+                  //         )
+                  //       ],
+                  //     ),
+                  //   ],
+                  // ),
                 ),
               ),
-              // SizedBox(
-              //   width: size.width * 0.9,
-              //   child: Card(
-              //     elevation: 2,
-              //     shape: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.all(
-              //         Radius.circular(10.0),
-              //       ),
-              //     ),
-              //     child: ExpansionTile(
-              //       leading: Icon(Icons.person),
-              //       title: Text('유관우 ( 010-1234-1234 )'),
-              //       textColor: Colors.black87,
-              //       iconColor: Colors.black87,
-              //       children: [
-              //         Column(
-              //           mainAxisSize: MainAxisSize.min,
-              //           children: [
-              //             ListTile(
-              //               title: Text('1990-01-01'),
-              //               subtitle: Text('북가좌2동'),
-              //             ),
-              //             Row(
-              //               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //               children: [
-              //                 TextButton(
-              //                   onPressed: () {},
-              //                   child: Text('입장'),
-              //                   style: TextButton.styleFrom(
-              //                       primary: Colors.white,
-              //                       backgroundColor: Color(0xFF325DA5),
-              //                       fixedSize: Size(size.width * 0.42, 30)),
-              //                 ),
-              //                 TextButton(
-              //                   onPressed: () {},
-              //                   child: Text('퇴장'),
-              //                   style: TextButton.styleFrom(
-              //                       primary: Colors.white,
-              //                       backgroundColor: Color(0xFFDA1317),
-              //                       fixedSize: Size(size.width * 0.42, 30)),
-              //                 ),
-              //               ],
-              //             ),
-              //           ],
-              //         ),
-              //       ],
-              //     ),
-              //     // Column(
-              //     //   mainAxisSize: MainAxisSize.min,
-              //     //   children: [
-              //     //     ListTile(
-              //     //       title: Text('유관우 / 010-1234-1234'),
-              //     //       subtitle: Text('1990-01-01 / 북가좌2동'),
-              //     //     ),
-              //     //     ButtonBar(
-              //     //       children: [
-              //     //         TextButton(
-              //     //           onPressed: () {},
-              //     //           child: Text('입장'),
-              //     //           style: TextButton.styleFrom(
-              //     //             primary: Colors.white,
-              //     //             backgroundColor: Colors.green,
-              //     //           ),
-              //     //         ),
-              //     //         TextButton(
-              //     //           onPressed: () {},
-              //     //           child: Text('퇴장'),
-              //     //           style: TextButton.styleFrom(
-              //     //             primary: Colors.white,
-              //     //             backgroundColor: Colors.redAccent,
-              //     //           ),
-              //     //         )
-              //     //       ],
-              //     //     ),
-              //     //   ],
-              //     // ),
-              //   ),
-              // ),
-              // SizedBox(
-              //   width: size.width * 0.9,
-              //   child: Card(
-              //     elevation: 2,
-              //     shape: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.all(
-              //         Radius.circular(10.0),
-              //       ),
-              //     ),
-              //     child: ExpansionTile(
-              //       leading: Icon(Icons.person),
-              //       title: Text('유관우 ( 010-1234-1234 )'),
-              //       textColor: Colors.black87,
-              //       iconColor: Colors.black87,
-              //       children: [
-              //         Column(
-              //           mainAxisSize: MainAxisSize.min,
-              //           children: [
-              //             ListTile(
-              //               title: Text('1990-01-01'),
-              //               subtitle: Text('북가좌2동'),
-              //             ),
-              //             Row(
-              //               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //               children: [
-              //                 TextButton(
-              //                   onPressed: () {},
-              //                   child: Text('입장'),
-              //                   style: TextButton.styleFrom(
-              //                       primary: Colors.white,
-              //                       backgroundColor: Color(0xFF325DA5),
-              //                       fixedSize: Size(size.width * 0.42, 30)),
-              //                 ),
-              //                 TextButton(
-              //                   onPressed: () {},
-              //                   child: Text('퇴장'),
-              //                   style: TextButton.styleFrom(
-              //                       primary: Colors.white,
-              //                       backgroundColor: Color(0xFFDA1317),
-              //                       fixedSize: Size(size.width * 0.42, 30)),
-              //                 ),
-              //               ],
-              //             ),
-              //           ],
-              //         ),
-              //       ],
-              //     ),
-              //     // Column(
-              //     //   mainAxisSize: MainAxisSize.min,
-              //     //   children: [
-              //     //     ListTile(
-              //     //       title: Text('유관우 / 010-1234-1234'),
-              //     //       subtitle: Text('1990-01-01 / 북가좌2동'),
-              //     //     ),
-              //     //     ButtonBar(
-              //     //       children: [
-              //     //         TextButton(
-              //     //           onPressed: () {},
-              //     //           child: Text('입장'),
-              //     //           style: TextButton.styleFrom(
-              //     //             primary: Colors.white,
-              //     //             backgroundColor: Colors.green,
-              //     //           ),
-              //     //         ),
-              //     //         TextButton(
-              //     //           onPressed: () {},
-              //     //           child: Text('퇴장'),
-              //     //           style: TextButton.styleFrom(
-              //     //             primary: Colors.white,
-              //     //             backgroundColor: Colors.redAccent,
-              //     //           ),
-              //     //         )
-              //     //       ],
-              //     //     ),
-              //     //   ],
-              //     // ),
-              //   ),
-              // ),
-              // SizedBox(
-              //   width: size.width * 0.9,
-              //   child: Card(
-              //     elevation: 2,
-              //     shape: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.all(
-              //         Radius.circular(10.0),
-              //       ),
-              //     ),
-              //     child: ExpansionTile(
-              //       leading: Icon(Icons.person),
-              //       title: Text('유관우 ( 010-1234-1234 )'),
-              //       textColor: Colors.black87,
-              //       iconColor: Colors.black87,
-              //       children: [
-              //         Column(
-              //           mainAxisSize: MainAxisSize.min,
-              //           children: [
-              //             ListTile(
-              //               title: Text('1990-01-01'),
-              //               subtitle: Text('북가좌2동'),
-              //             ),
-              //             Row(
-              //               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //               children: [
-              //                 TextButton(
-              //                   onPressed: () {},
-              //                   child: Text('입장'),
-              //                   style: TextButton.styleFrom(
-              //                       primary: Colors.white,
-              //                       backgroundColor: Color(0xFF325DA5),
-              //                       fixedSize: Size(size.width * 0.42, 30)),
-              //                 ),
-              //                 TextButton(
-              //                   onPressed: () {},
-              //                   child: Text('퇴장'),
-              //                   style: TextButton.styleFrom(
-              //                       primary: Colors.white,
-              //                       backgroundColor: Color(0xFFDA1317),
-              //                       fixedSize: Size(size.width * 0.42, 30)),
-              //                 ),
-              //               ],
-              //             ),
-              //           ],
-              //         ),
-              //       ],
-              //     ),
-              //     // Column(
-              //     //   mainAxisSize: MainAxisSize.min,
-              //     //   children: [
-              //     //     ListTile(
-              //     //       title: Text('유관우 / 010-1234-1234'),
-              //     //       subtitle: Text('1990-01-01 / 북가좌2동'),
-              //     //     ),
-              //     //     ButtonBar(
-              //     //       children: [
-              //     //         TextButton(
-              //     //           onPressed: () {},
-              //     //           child: Text('입장'),
-              //     //           style: TextButton.styleFrom(
-              //     //             primary: Colors.white,
-              //     //             backgroundColor: Colors.green,
-              //     //           ),
-              //     //         ),
-              //     //         TextButton(
-              //     //           onPressed: () {},
-              //     //           child: Text('퇴장'),
-              //     //           style: TextButton.styleFrom(
-              //     //             primary: Colors.white,
-              //     //             backgroundColor: Colors.redAccent,
-              //     //           ),
-              //     //         )
-              //     //       ],
-              //     //     ),
-              //     //   ],
-              //     // ),
-              //   ),
-              // ),
-              // SizedBox(
-              //   width: size.width * 0.9,
-              //   child: Card(
-              //     elevation: 2,
-              //     shape: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.all(
-              //         Radius.circular(10.0),
-              //       ),
-              //     ),
-              //     child: ExpansionTile(
-              //       leading: Icon(Icons.person),
-              //       title: Text('유관우 / 010-1234-1234'),
-              //       textColor: Colors.black87,
-              //       iconColor: Colors.black87,
-              //       children: [
-              //         Column(
-              //           mainAxisSize: MainAxisSize.min,
-              //           children: [
-              //             ListTile(
-              //               title: Text('1990-01-01'),
-              //               subtitle: Text('북가좌2동'),
-              //             ),
-              //             Row(
-              //               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //               children: [
-              //                 TextButton(
-              //                   onPressed: () {},
-              //                   child: Text('입장'),
-              //                   style: TextButton.styleFrom(
-              //                       primary: Colors.white,
-              //                       backgroundColor: Color(0xFF325DA5),
-              //                       fixedSize: Size(size.width * 0.42, 30)),
-              //                 ),
-              //                 TextButton(
-              //                   onPressed: () {},
-              //                   child: Text('퇴장'),
-              //                   style: TextButton.styleFrom(
-              //                       primary: Colors.white,
-              //                       backgroundColor: Color(0xFFDA1317),
-              //                       fixedSize: Size(size.width * 0.42, 30)),
-              //                 ),
-              //               ],
-              //             ),
-              //           ],
-              //         ),
-              //       ],
-              //     ),
-              //     // Column(
-              //     //   mainAxisSize: MainAxisSize.min,
-              //     //   children: [
-              //     //     ListTile(
-              //     //       title: Text('유관우 / 010-1234-1234'),
-              //     //       subtitle: Text('1990-01-01 / 북가좌2동'),
-              //     //     ),
-              //     //     ButtonBar(
-              //     //       children: [
-              //     //         TextButton(
-              //     //           onPressed: () {},
-              //     //           child: Text('입장'),
-              //     //           style: TextButton.styleFrom(
-              //     //             primary: Colors.white,
-              //     //             backgroundColor: Colors.green,
-              //     //           ),
-              //     //         ),
-              //     //         TextButton(
-              //     //           onPressed: () {},
-              //     //           child: Text('퇴장'),
-              //     //           style: TextButton.styleFrom(
-              //     //             primary: Colors.white,
-              //     //             backgroundColor: Colors.redAccent,
-              //     //           ),
-              //     //         )
-              //     //       ],
-              //     //     ),
-              //     //   ],
-              //     // ),
-              //   ),
-              // ),
-              // SizedBox(
-              //   width: size.width * 0.9,
-              //   child: Card(
-              //     elevation: 2,
-              //     shape: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.all(
-              //         Radius.circular(10.0),
-              //       ),
-              //     ),
-              //     child: ExpansionTile(
-              //       leading: Icon(Icons.person),
-              //       title: Text('유관우 / 010-1234-1234'),
-              //       textColor: Colors.black87,
-              //       iconColor: Colors.black87,
-              //       children: [
-              //         Column(
-              //           mainAxisSize: MainAxisSize.min,
-              //           children: [
-              //             ListTile(
-              //               title: Text('1990-01-01'),
-              //               subtitle: Text('북가좌2동'),
-              //             ),
-              //             Row(
-              //               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //               children: [
-              //                 TextButton(
-              //                   onPressed: () {},
-              //                   child: Text('입장'),
-              //                   style: TextButton.styleFrom(
-              //                       primary: Colors.white,
-              //                       backgroundColor: Color(0xFF325DA5),
-              //                       fixedSize: Size(size.width * 0.42, 30)),
-              //                 ),
-              //                 TextButton(
-              //                   onPressed: () {},
-              //                   child: Text('퇴장'),
-              //                   style: TextButton.styleFrom(
-              //                       primary: Colors.white,
-              //                       backgroundColor: Color(0xFFDA1317),
-              //                       fixedSize: Size(size.width * 0.42, 30)),
-              //                 ),
-              //               ],
-              //             ),
-              //           ],
-              //         ),
-              //       ],
-              //     ),
-              //     // Column(
-              //     //   mainAxisSize: MainAxisSize.min,
-              //     //   children: [
-              //     //     ListTile(
-              //     //       title: Text('유관우 / 010-1234-1234'),
-              //     //       subtitle: Text('1990-01-01 / 북가좌2동'),
-              //     //     ),
-              //     //     ButtonBar(
-              //     //       children: [
-              //     //         TextButton(
-              //     //           onPressed: () {},
-              //     //           child: Text('입장'),
-              //     //           style: TextButton.styleFrom(
-              //     //             primary: Colors.white,
-              //     //             backgroundColor: Colors.green,
-              //     //           ),
-              //     //         ),
-              //     //         TextButton(
-              //     //           onPressed: () {},
-              //     //           child: Text('퇴장'),
-              //     //           style: TextButton.styleFrom(
-              //     //             primary: Colors.white,
-              //     //             backgroundColor: Colors.redAccent,
-              //     //           ),
-              //     //         )
-              //     //       ],
-              //     //     ),
-              //     //   ],
-              //     // ),
-              //   ),
-              // ),
-              // SizedBox(
-              //   width: size.width * 0.9,
-              //   child: Card(
-              //     elevation: 2,
-              //     shape: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.all(
-              //         Radius.circular(10.0),
-              //       ),
-              //     ),
-              //     child: ExpansionTile(
-              //       leading: Icon(Icons.person),
-              //       title: Text('유관우 / 010-1234-1234'),
-              //       textColor: Colors.black87,
-              //       iconColor: Colors.black87,
-              //       children: [
-              //         Column(
-              //           mainAxisSize: MainAxisSize.min,
-              //           children: [
-              //             ListTile(
-              //               title: Text('1990-01-01'),
-              //               subtitle: Text('북가좌2동'),
-              //             ),
-              //             Row(
-              //               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //               children: [
-              //                 TextButton(
-              //                   onPressed: () {},
-              //                   child: Text('입장'),
-              //                   style: TextButton.styleFrom(
-              //                       primary: Colors.white,
-              //                       backgroundColor: Color(0xFF325DA5),
-              //                       fixedSize: Size(size.width * 0.42, 30)),
-              //                 ),
-              //                 TextButton(
-              //                   onPressed: () {},
-              //                   child: Text('퇴장'),
-              //                   style: TextButton.styleFrom(
-              //                       primary: Colors.white,
-              //                       backgroundColor: Color(0xFFDA1317),
-              //                       fixedSize: Size(size.width * 0.42, 30)),
-              //                 ),
-              //               ],
-              //             ),
-              //           ],
-              //         ),
-              //       ],
-              //     ),
-              //     // Column(
-              //     //   mainAxisSize: MainAxisSize.min,
-              //     //   children: [
-              //     //     ListTile(
-              //     //       title: Text('유관우 / 010-1234-1234'),
-              //     //       subtitle: Text('1990-01-01 / 북가좌2동'),
-              //     //     ),
-              //     //     ButtonBar(
-              //     //       children: [
-              //     //         TextButton(
-              //     //           onPressed: () {},
-              //     //           child: Text('입장'),
-              //     //           style: TextButton.styleFrom(
-              //     //             primary: Colors.white,
-              //     //             backgroundColor: Colors.green,
-              //     //           ),
-              //     //         ),
-              //     //         TextButton(
-              //     //           onPressed: () {},
-              //     //           child: Text('퇴장'),
-              //     //           style: TextButton.styleFrom(
-              //     //             primary: Colors.white,
-              //     //             backgroundColor: Colors.redAccent,
-              //     //           ),
-              //     //         )
-              //     //       ],
-              //     //     ),
-              //     //   ],
-              //     // ),
-              //   ),
-              // ),
+              SizedBox(
+                width: size.width * 0.9,
+                child: Card(
+                  elevation: 2,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10.0),
+                    ),
+                  ),
+                  child: ExpansionTile(
+                    leading: Icon(Icons.person),
+                    title: Text('유관우 / 010-1234-1234'),
+                    textColor: Colors.black87,
+                    iconColor: Colors.black87,
+                    children: [
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          ListTile(
+                            title: Text('1990-01-01'),
+                            subtitle: Text('북가좌2동'),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('입장'),
+                                style: TextButton.styleFrom(
+                                    primary: Colors.white,
+                                    backgroundColor: Color(0xFF325DA5),
+                                    fixedSize: Size(size.width * 0.42, 30)),
+                              ),
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('퇴장'),
+                                style: TextButton.styleFrom(
+                                    primary: Colors.white,
+                                    backgroundColor: Color(0xFFDA1317),
+                                    fixedSize: Size(size.width * 0.42, 30)),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  // Column(
+                  //   mainAxisSize: MainAxisSize.min,
+                  //   children: [
+                  //     ListTile(
+                  //       title: Text('유관우 / 010-1234-1234'),
+                  //       subtitle: Text('1990-01-01 / 북가좌2동'),
+                  //     ),
+                  //     ButtonBar(
+                  //       children: [
+                  //         TextButton(
+                  //           onPressed: () {},
+                  //           child: Text('입장'),
+                  //           style: TextButton.styleFrom(
+                  //             primary: Colors.white,
+                  //             backgroundColor: Colors.green,
+                  //           ),
+                  //         ),
+                  //         TextButton(
+                  //           onPressed: () {},
+                  //           child: Text('퇴장'),
+                  //           style: TextButton.styleFrom(
+                  //             primary: Colors.white,
+                  //             backgroundColor: Colors.redAccent,
+                  //           ),
+                  //         )
+                  //       ],
+                  //     ),
+                  //   ],
+                  // ),
+                ),
+              ),
+              SizedBox(
+                width: size.width * 0.9,
+                child: Card(
+                  elevation: 2,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10.0),
+                    ),
+                  ),
+                  child: ExpansionTile(
+                    leading: Icon(Icons.person),
+                    title: Text('유관우 / 010-1234-1234'),
+                    textColor: Colors.black87,
+                    iconColor: Colors.black87,
+                    children: [
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          ListTile(
+                            title: Text('1990-01-01'),
+                            subtitle: Text('북가좌2동'),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('입장'),
+                                style: TextButton.styleFrom(
+                                    primary: Colors.white,
+                                    backgroundColor: Color(0xFF325DA5),
+                                    fixedSize: Size(size.width * 0.42, 30)),
+                              ),
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('퇴장'),
+                                style: TextButton.styleFrom(
+                                    primary: Colors.white,
+                                    backgroundColor: Color(0xFFDA1317),
+                                    fixedSize: Size(size.width * 0.42, 30)),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  // Column(
+                  //   mainAxisSize: MainAxisSize.min,
+                  //   children: [
+                  //     ListTile(
+                  //       title: Text('유관우 / 010-1234-1234'),
+                  //       subtitle: Text('1990-01-01 / 북가좌2동'),
+                  //     ),
+                  //     ButtonBar(
+                  //       children: [
+                  //         TextButton(
+                  //           onPressed: () {},
+                  //           child: Text('입장'),
+                  //           style: TextButton.styleFrom(
+                  //             primary: Colors.white,
+                  //             backgroundColor: Colors.green,
+                  //           ),
+                  //         ),
+                  //         TextButton(
+                  //           onPressed: () {},
+                  //           child: Text('퇴장'),
+                  //           style: TextButton.styleFrom(
+                  //             primary: Colors.white,
+                  //             backgroundColor: Colors.redAccent,
+                  //           ),
+                  //         )
+                  //       ],
+                  //     ),
+                  //   ],
+                  // ),
+                ),
+              ),
+              SizedBox(
+                width: size.width * 0.9,
+                child: Card(
+                  elevation: 2,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10.0),
+                    ),
+                  ),
+                  child: ExpansionTile(
+                    leading: Icon(Icons.person),
+                    title: Text('유관우 / 010-1234-1234'),
+                    textColor: Colors.black87,
+                    iconColor: Colors.black87,
+                    children: [
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          ListTile(
+                            title: Text('1990-01-01'),
+                            subtitle: Text('북가좌2동'),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('입장'),
+                                style: TextButton.styleFrom(
+                                    primary: Colors.white,
+                                    backgroundColor: Color(0xFF325DA5),
+                                    fixedSize: Size(size.width * 0.42, 30)),
+                              ),
+                              TextButton(
+                                onPressed: () {},
+                                child: Text('퇴장'),
+                                style: TextButton.styleFrom(
+                                    primary: Colors.white,
+                                    backgroundColor: Color(0xFFDA1317),
+                                    fixedSize: Size(size.width * 0.42, 30)),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  // Column(
+                  //   mainAxisSize: MainAxisSize.min,
+                  //   children: [
+                  //     ListTile(
+                  //       title: Text('유관우 / 010-1234-1234'),
+                  //       subtitle: Text('1990-01-01 / 북가좌2동'),
+                  //     ),
+                  //     ButtonBar(
+                  //       children: [
+                  //         TextButton(
+                  //           onPressed: () {},
+                  //           child: Text('입장'),
+                  //           style: TextButton.styleFrom(
+                  //             primary: Colors.white,
+                  //             backgroundColor: Colors.green,
+                  //           ),
+                  //         ),
+                  //         TextButton(
+                  //           onPressed: () {},
+                  //           child: Text('퇴장'),
+                  //           style: TextButton.styleFrom(
+                  //             primary: Colors.white,
+                  //             backgroundColor: Colors.redAccent,
+                  //           ),
+                  //         )
+                  //       ],
+                  //     ),
+                  //   ],
+                  // ),
+                ),
+              ),
             ],
           ),
         ),
