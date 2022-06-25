@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kpec/screen/login_page.dart';
 import 'package:kpec/screen/main_page.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -15,6 +16,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('ko', 'KR'),
+      ],
       title: 'LOGIN TEST',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
