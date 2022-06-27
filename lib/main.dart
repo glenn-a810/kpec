@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:kpec/screen/login_page.dart';
 import 'package:kpec/screen/main_page.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+// import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: MyApp(),
-  ));
+  runApp(
+    MaterialApp(
+      home: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -16,13 +18,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      localizationsDelegates: [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      supportedLocales: [
-        Locale('ko', 'KR'),
-      ],
+      // localizationsDelegates: [
+      //   GlobalMaterialLocalizations.delegate,
+      //   GlobalWidgetsLocalizations.delegate,
+      //   GlobalCupertinoLocalizations.delegate,
+      // ],
+      // supportedLocales: [
+      //   Locale('ko'),
+      // ],
       title: 'LOGIN TEST',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
