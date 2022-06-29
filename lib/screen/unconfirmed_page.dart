@@ -12,6 +12,7 @@ class _UnconfirmedState extends State<Unconfirmed> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return TextButton(
       onPressed: () {
         // selectDate();
@@ -30,8 +31,25 @@ class _UnconfirmedState extends State<Unconfirmed> {
       },
       child: Column(
         children: [
-          Text('DatePicker'),
-          Text('$_setDate'),
+          SizedBox(
+            height: size.height * 0.03,
+          ),
+          // SizedBox(
+          //   child: TextButton(
+          //     onPressed: () {},
+          //     child: Text('Date Picker'),
+          //   ),
+          // ),
+          SizedBox(
+            width: size.width * 0.9,
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: '$_setDate',
+              ),
+            ),
+          ),
+          // Text('DatePicker'),
+          // Text('$_setDate'),
         ],
       ),
     );
