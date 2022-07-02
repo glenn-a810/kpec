@@ -74,7 +74,8 @@ class _UnconfirmedState extends State<Unconfirmed> {
 
                 if (_setDate != null) {
                   String formattedDate =
-                      DateFormat('yyyy-MM-dd').format(_setDate);
+                      DateFormat('yyyy년 MM월 dd일 E요일 a', 'ko_KR')
+                          .format(_setDate);
 
                   setState(() {
                     dateInput.text = formattedDate;
