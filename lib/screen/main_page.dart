@@ -431,13 +431,6 @@ void _showDialog(context) {
                     Navigator.pop(context);
                   },
                 ),
-                // ListTile(
-                //   leading: Icon(Icons.nightlight_round_outlined),
-                //   title: Text('야간교육'),
-                //   onTap: () {
-                //     Navigator.pop(context);
-                //   },
-                // ),
               ],
             ),
           ),

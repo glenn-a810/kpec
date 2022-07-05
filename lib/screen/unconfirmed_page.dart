@@ -138,35 +138,6 @@ class _UnconfirmedState extends State<Unconfirmed> {
                       ),
                     ],
                   ),
-                  // Column(
-                  //   mainAxisSize: MainAxisSize.min,
-                  //   children: [
-                  //     ListTile(
-                  //       title: Text('유관우 / 010-1234-1234'),
-                  //       subtitle: Text('1990-01-01 / 북가좌2동'),
-                  //     ),
-                  //     ButtonBar(
-                  //       children: [
-                  //         TextButton(
-                  //           onPressed: () {},
-                  //           child: Text('입장'),
-                  //           style: TextButton.styleFrom(
-                  //             primary: Colors.white,
-                  //             backgroundColor: Colors.green,
-                  //           ),
-                  //         ),
-                  //         TextButton(
-                  //           onPressed: () {},
-                  //           child: Text('퇴장'),
-                  //           style: TextButton.styleFrom(
-                  //             primary: Colors.white,
-                  //             backgroundColor: Colors.redAccent,
-                  //           ),
-                  //         )
-                  //       ],
-                  //     ),
-                  //   ],
-                  // ),
                 ),
               ),
               SizedBox(
@@ -216,35 +187,6 @@ class _UnconfirmedState extends State<Unconfirmed> {
                       ),
                     ],
                   ),
-                  // Column(
-                  //   mainAxisSize: MainAxisSize.min,
-                  //   children: [
-                  //     ListTile(
-                  //       title: Text('유관우 / 010-1234-1234'),
-                  //       subtitle: Text('1990-01-01 / 북가좌2동'),
-                  //     ),
-                  //     ButtonBar(
-                  //       children: [
-                  //         TextButton(
-                  //           onPressed: () {},
-                  //           child: Text('입장'),
-                  //           style: TextButton.styleFrom(
-                  //             primary: Colors.white,
-                  //             backgroundColor: Colors.green,
-                  //           ),
-                  //         ),
-                  //         TextButton(
-                  //           onPressed: () {},
-                  //           child: Text('퇴장'),
-                  //           style: TextButton.styleFrom(
-                  //             primary: Colors.white,
-                  //             backgroundColor: Colors.redAccent,
-                  //           ),
-                  //         )
-                  //       ],
-                  //     ),
-                  //   ],
-                  // ),
                 ),
               ),
               SizedBox(
@@ -561,41 +503,6 @@ class _UnconfirmedState extends State<Unconfirmed> {
               ),
             ],
           ),
-          // child: Column(
-          //   children: [
-          //     SizedBox(
-          //       height: size.height * 0.03,
-          //     ),
-          //     TextButton(
-          //       onPressed: () {
-          //         // selectDate();
-          //         Future selectedDate = showDatePicker(
-          //           context: context,
-          //           initialDate: DateTime.now(),
-          //           firstDate: DateTime(2022), // 출결 계약년도
-          //           lastDate:
-          //               DateTime(2023), // 출결 계약종료 년도 (계약종료 시 해가 넘어가는 경우를 위해 +1년)
-          //         );
-          //
-          //         selectedDate.then((dateString) {
-          //           setState(() {
-          //             _setDate = dateString;
-          //           });
-          //         });
-          //       },
-          //       child: Column(
-          //         children: [
-          //           Text('DatePicker'),
-          //           // Text('$_setDate'),
-          //         ],
-          //       ),
-          //     ),
-          //     SizedBox(
-          //       width: size.width * 0.9,
-          //       child: Text('$_setDate'),
-          //     )
-          //   ],
-          // ),
         ),
       ],
     );
