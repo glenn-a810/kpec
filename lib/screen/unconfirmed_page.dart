@@ -30,64 +30,142 @@ class _UnconfirmedState extends State<Unconfirmed> {
               SizedBox(
                 height: size.height * 0.03,
               ),
-              SizedBox(
-                width: size.width * 0.9,
-                child: TextField(
-                  controller: dateInput,
-                  decoration: InputDecoration(
-                    contentPadding:
-                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10.0),
+              Row(
+                children: [
+                  SizedBox(
+                    width: size.width * 0.05,
+                  ),
+                  SizedBox(
+                    width: size.width * 0.7,
+                    child: TextField(
+                      controller: dateInput,
+                      decoration: InputDecoration(
+                        hintText: '처리할 날짜를 입력해 주세요',
+                        contentPadding: EdgeInsets.symmetric(
+                            vertical: 10.0, horizontal: 10.0),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10.0),
+                          ),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black26,
+                            width: 2.0,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10.0),
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.black38,
+                            width: 3.0,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10.0),
+                          ),
+                        ),
+                        prefixIcon: Icon(
+                          Icons.calendar_today,
+                          color: Colors.black38,
+                        ),
                       ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.black26,
-                        width: 2.0,
-                      ),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10.0),
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.black38,
-                        width: 3.0,
-                      ),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10.0),
-                      ),
-                    ),
-                    prefixIcon: Icon(
-                      Icons.calendar_today,
-                      color: Colors.black38,
+                      readOnly: true,
+                      onTap: () async {
+                        DateTime _setDate = await showDatePicker(
+                          context: context,
+                          initialDate: DateTime.now(),
+                          firstDate: DateTime(2022),
+                          lastDate: DateTime(2023),
+                        ) as DateTime;
+
+                        if (_setDate != null) {
+                          String formattedDate =
+                              DateFormat('yyyy년 MM월 dd일 E요일 a', 'ko_KR')
+                                  .format(_setDate);
+
+                          setState(() {
+                            dateInput.text = formattedDate;
+                          });
+                        } else {
+                          dateInput.text = '날짜를 입력해 주세요';
+                        }
+                      },
                     ),
                   ),
-                  readOnly: true,
-                  onTap: () async {
-                    DateTime _setDate = await showDatePicker(
-                      context: context,
-                      initialDate: DateTime.now(),
-                      firstDate: DateTime(2022),
-                      lastDate: DateTime(2023),
-                    ) as DateTime;
-
-                    if (_setDate != null) {
-                      String formattedDate =
-                          DateFormat('yyyy년 MM월 dd일 E요일 a', 'ko_KR')
-                              .format(_setDate);
-
-                      setState(() {
-                        dateInput.text = formattedDate;
-                      });
-                    } else {
-                      dateInput.text = '날짜를 입력해 주세요';
-                    }
-                  },
-                ),
+                  SizedBox(
+                    width: size.width * 0.03,
+                  ),
+                  SizedBox(
+                    width: size.width * 0.17,
+                    height: size.height * 0.047,
+                    child: ElevatedButton(
+                      child: Text('검색'),
+                      onPressed: () {},
+                    ),
+                  ),
+                ],
               ),
+              // SizedBox(
+              //   width: size.width * 0.9,
+              //   child: TextField(
+              //     controller: dateInput,
+              //     decoration: InputDecoration(
+              //       hintText: '처리할 날짜를 입력해 주세요',
+              //       contentPadding:
+              //           EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+              //       border: OutlineInputBorder(
+              //         borderRadius: BorderRadius.all(
+              //           Radius.circular(10.0),
+              //         ),
+              //       ),
+              //       enabledBorder: OutlineInputBorder(
+              //         borderSide: BorderSide(
+              //           color: Colors.black26,
+              //           width: 2.0,
+              //         ),
+              //         borderRadius: BorderRadius.all(
+              //           Radius.circular(10.0),
+              //         ),
+              //       ),
+              //       focusedBorder: OutlineInputBorder(
+              //         borderSide: BorderSide(
+              //           color: Colors.black38,
+              //           width: 3.0,
+              //         ),
+              //         borderRadius: BorderRadius.all(
+              //           Radius.circular(10.0),
+              //         ),
+              //       ),
+              //       prefixIcon: Icon(
+              //         Icons.calendar_today,
+              //         color: Colors.black38,
+              //       ),
+              //     ),
+              //     readOnly: true,
+              //     onTap: () async {
+              //       DateTime _setDate = await showDatePicker(
+              //         context: context,
+              //         initialDate: DateTime.now(),
+              //         firstDate: DateTime(2022),
+              //         lastDate: DateTime(2023),
+              //       ) as DateTime;
+              //
+              //       if (_setDate != null) {
+              //         String formattedDate =
+              //             DateFormat('yyyy년 MM월 dd일 E요일 a', 'ko_KR')
+              //                 .format(_setDate);
+              //
+              //         setState(() {
+              //           dateInput.text = formattedDate;
+              //         });
+              //       } else {
+              //         dateInput.text = '날짜를 입력해 주세요';
+              //       }
+              //     },
+              //   ),
+              // ),
               SizedBox(
                 height: size.height * 0.03,
               ),

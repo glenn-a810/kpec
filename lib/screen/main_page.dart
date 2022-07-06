@@ -66,7 +66,7 @@ class _MainPageState extends State<MainPage> {
       // body: _subPage[_currentIndex],
       body: _subPage[_currentIndex],
       bottomNavigationBar: SizedBox(
-        height: 115,
+        height: 80,
         child: BottomNavigationBar(
           onTap: _onTap,
           currentIndex: _currentIndex,
