@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:intl/date_symbol_data_local.dart';
+// import 'package:intl/date_symbol_data_local.dart';
 import 'package:kpec/screen/attend_status_page.dart';
 import 'package:kpec/screen/field_pass_page.dart';
 import 'package:kpec/screen/manual_pass_page.dart';
@@ -18,14 +18,14 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
 
-  @override
-  void initState() {
-    super.initState();
-    initializeDateFormatting();
-    Future.delayed(Duration.zero, () {
-      _showDialog(context);
-    });
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   initializeDateFormatting();
+  //   Future.delayed(Duration.zero, () {
+  //     _showDialog(context);
+  //   });
+  // }
 
   void _onTap(int index) {
     setState(() {
@@ -383,57 +383,57 @@ class _mainState extends State<_main> {
   }
 }
 
-void _showDialog(context) {
-  String initialData;
-
-  var currentDate = DateTime.now();
-  String dateConvertFormat =
-      DateFormat('yyyy년 M월 d일 (E)', 'ko').format(currentDate);
-
-  showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) {
-        return Scaffold(
-          backgroundColor: Colors.transparent,
-          body: AlertDialog(
-            title: Center(
-              child: Text(
-                '출결 설정',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-            ),
-            content: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  '$dateConvertFormat',
-                  style: TextStyle(),
-                ),
-                ListTile(
-                  leading: Icon(Icons.light_mode_outlined),
-                  title: Text('오전교육'),
-                  onTap: () async {
-                    initialData = '오전교육';
-                    // Navigator.pop(context);
-                    await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                MainPage(initialData: initialData)));
-                    Navigator.pop(context);
-                  },
-                ),
-                ListTile(
-                  leading: Icon(Icons.wb_twilight_outlined),
-                  title: Text('오후교육'),
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                ),
-              ],
-            ),
-          ),
-        );
-      });
-}
+// void _showDialog(context) {
+//   String initialData;
+//
+//   var currentDate = DateTime.now();
+//   String dateConvertFormat =
+//       DateFormat('yyyy년 M월 d일 (E)', 'ko').format(currentDate);
+//
+//   showDialog(
+//       context: context,
+//       barrierDismissible: false,
+//       builder: (context) {
+//         return Scaffold(
+//           backgroundColor: Colors.transparent,
+//           body: AlertDialog(
+//             title: Center(
+//               child: Text(
+//                 '출결 설정',
+//                 style: TextStyle(fontWeight: FontWeight.bold),
+//               ),
+//             ),
+//             content: Column(
+//               mainAxisSize: MainAxisSize.min,
+//               children: [
+//                 Text(
+//                   '$dateConvertFormat',
+//                   style: TextStyle(),
+//                 ),
+//                 ListTile(
+//                   leading: Icon(Icons.light_mode_outlined),
+//                   title: Text('오전교육'),
+//                   onTap: () async {
+//                     initialData = '오전교육';
+//                     // Navigator.pop(context);
+//                     await Navigator.push(
+//                         context,
+//                         MaterialPageRoute(
+//                             builder: (context) =>
+//                                 MainPage(initialData: initialData)));
+//                     Navigator.pop(context);
+//                   },
+//                 ),
+//                 ListTile(
+//                   leading: Icon(Icons.wb_twilight_outlined),
+//                   title: Text('오후교육'),
+//                   onTap: () {
+//                     Navigator.pop(context);
+//                   },
+//                 ),
+//               ],
+//             ),
+//           ),
+//         );
+//       });
+// }
