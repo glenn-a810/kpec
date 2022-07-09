@@ -16,7 +16,7 @@ class _AttendStatusState extends State<AttendStatus> {
   }
 
   Future<void> _downloadCsv() async {
-    final url =
+    final Uri url =
         'https://projects.fivethirtyeight.com/soccer-api/international/spi_global_rankings_intl.csv';
     try {
       var csvRead = await http.read(url);
@@ -42,7 +42,7 @@ class _AttendStatusState extends State<AttendStatus> {
 class DataTablePage extends StatefulWidget {
   final csvString;
 
-  DataTablePage({Key key, @required this.csvString}) : super(key: key);
+  DataTablePage({Key? key, @required this.csvString}) : super(key: key);
 
   @override
   _DataTablePageState createState() => _DataTablePageState();
