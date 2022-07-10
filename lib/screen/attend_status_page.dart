@@ -16,10 +16,10 @@ class _AttendStatusState extends State<AttendStatus> {
   }
 
   Future<void> _downloadCsv() async {
-    final Uri url =
-        'https://projects.fivethirtyeight.com/soccer-api/international/spi_global_rankings_intl.csv';
+    final url =
+        "https://projects.fivethirtyeight.com/soccer-api/international/spi_global_rankings_intl.csv";
     try {
-      var csvRead = await http.read(url);
+      var csvRead = await http.read(Uri.parse(url));
       Navigator.push(
         context,
         MaterialPageRoute(
