@@ -33,8 +33,8 @@ class _AttendStatusState extends State<AttendStatus> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('출결현황 로딩중...'),
+    return Scaffold(
+      body: Text('출결현황 로딩중...'),
     );
   }
 }
@@ -120,8 +120,8 @@ class _DataTablePageState extends State<DataTablePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SingleChildScrollView(
+    return Scaffold(
+      body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: SingleChildScrollView(
           child: _getDataTable(),
