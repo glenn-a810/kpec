@@ -111,8 +111,8 @@ class _DataTablePageState extends State<DataTablePage> {
 
   Widget _getDataTable() {
     return DataTable(
-      horizontalMargin: 12.0,
-      columnSpacing: 28.0,
+      horizontalMargin: 0.0,
+      columnSpacing: 12.0,
       columns: _getColumns(),
       rows: _getRows(),
     );
