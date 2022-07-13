@@ -229,7 +229,19 @@ class _mainState extends State<_main> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('출결현황'),
+                        // Text('출결현황'),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => AttendStatus()));
+                          },
+                          child: Text(
+                            '출결현황',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
                         SizedBox(
                           height: size.height * 0.02,
                         ),
@@ -309,7 +321,19 @@ class _mainState extends State<_main> {
                         SizedBox(
                           width: size.width * 0.02,
                         ),
-                        Text('수기처리'),
+                        // Text('수기처리'),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => ManualPass()));
+                          },
+                          child: Text(
+                            '수기처리',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
