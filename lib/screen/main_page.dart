@@ -352,7 +352,19 @@ class _mainState extends State<_main> {
                         SizedBox(
                           width: size.width * 0.02,
                         ),
-                        Text('미확인 대원처리'),
+                        // Text('미확인 대원처리'),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Unconfirmed()));
+                          },
+                          child: Text(
+                            '미확인 대원처리',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
