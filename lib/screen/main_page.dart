@@ -383,7 +383,19 @@ class _mainState extends State<_main> {
                         SizedBox(
                           width: size.width * 0.02,
                         ),
-                        Text('현장등록 대원'),
+                        // Text('현장등록 대원'),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => FieldPass()));
+                          },
+                          child: Text(
+                            '현장등록 대원',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
