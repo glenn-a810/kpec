@@ -417,7 +417,19 @@ class _mainState extends State<_main> {
                         SizedBox(
                           width: size.width * 0.02,
                         ),
-                        Text('출결현황'),
+                        // Text('출결현황'),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => AttendStatus()));
+                          },
+                          child: Text(
+                            '출결현황',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
