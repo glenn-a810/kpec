@@ -6,6 +6,7 @@ import 'package:kpec/screen/field_pass_page.dart';
 import 'package:kpec/screen/manual_pass_page.dart';
 import 'package:kpec/screen/qr_scanner.dart';
 import 'package:kpec/screen/unconfirmed_page.dart';
+import 'package:otp/otp.dart';
 
 class MainPage extends StatefulWidget {
   MainPage({Key? key, this.initialData}) : super(key: key);
@@ -154,6 +155,8 @@ class _mainState extends State<_main> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    final code = OTP.generateTOTPCodeString(
+        'JBSWY3DPEHPK3PXP', DateTime.now().millisecondsSinceEpoch);
 
     return ListView(
       children: [
@@ -301,7 +304,14 @@ class _mainState extends State<_main> {
                           height: size.height * 0.02,
                         ),
                         Center(
-                          child: Text('일괄처리 코드를 생산하시려면 여기를 터치하세요.'),
+                          // child: Text('일괄처리 코드를 생산하시려면 여기를 터치하세요.'),
+                          child: Text(
+                            code,
+                            style: TextStyle(
+                              fontSize: 36,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
                         ),
                       ],
                     ),

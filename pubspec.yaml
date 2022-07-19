@@ -39,6 +39,7 @@ dependencies:
   mobile_scanner: ^2.0.0
   intl:
   http:
+  otp: ^3.1.1
 
 dev_dependencies:
   flutter_test:
