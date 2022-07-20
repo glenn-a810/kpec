@@ -156,7 +156,11 @@ class _mainState extends State<_main> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     final code = OTP.generateTOTPCodeString(
-        'JBSWY3DPEHPK3PXP', DateTime.now().millisecondsSinceEpoch);
+      'JBSWY3DPEHPK3PXP',
+      DateTime.now().millisecondsSinceEpoch,
+      interval: 60,
+      length: 5,
+    );
 
     return ListView(
       children: [
