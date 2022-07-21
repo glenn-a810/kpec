@@ -338,8 +338,12 @@ class _mainState extends State<_main> {
                         // Text('수기처리'),
                         TextButton(
                           onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => ManualPass()));
+                            // Navigator.of(context).push(MaterialPageRoute(
+                            //     builder: (context) => ManualPass()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ManualPass()));
                           },
                           child: Text(
                             '수기처리',
