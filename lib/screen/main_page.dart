@@ -324,6 +324,13 @@ class _mainState extends State<_main> {
               ),
               SizedBox(
                 width: size.width * 0.9,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text('수기처리'),
+                ),
+              ),
+              SizedBox(
+                width: size.width * 0.9,
                 child: Card(
                   margin: EdgeInsets.only(top: size.height * 0.03),
                   elevation: 4,
