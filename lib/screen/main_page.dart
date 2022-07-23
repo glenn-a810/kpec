@@ -325,8 +325,19 @@ class _mainState extends State<_main> {
               SizedBox(
                 width: size.width * 0.9,
                 child: ElevatedButton(
+                  style: ButtonStyle(
+                    alignment: Alignment.centerLeft,
+                    backgroundColor: MaterialStateProperty.all(
+                      Colors.white,
+                    ),
+                  ),
                   onPressed: () {},
-                  child: Text('수기처리'),
+                  child: Text(
+                    '수기처리',
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
                 ),
               ),
               SizedBox(
