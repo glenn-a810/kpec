@@ -296,8 +296,7 @@ class _mainState extends State<_main> {
               SizedBox(
                 width: size.width * 0.9,
                 child: Card(
-                  margin: EdgeInsets.only(
-                      top: size.height * 0.03, bottom: size.height * 0.03),
+                  margin: EdgeInsets.only(top: size.height * 0.03),
                   elevation: 4,
                   child: Padding(
                     padding: EdgeInsets.all(size.width * 0.04),
@@ -325,16 +324,32 @@ class _mainState extends State<_main> {
               ),
               SizedBox(
                 width: size.width * 0.9,
-                child: ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: Icon(Icons.drive_file_rename_outline),
-                  label: Text('수기처리'),
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.all(20.0),
-                    alignment: Alignment.centerLeft,
-                    primary: Colors.white,
-                    onPrimary: Colors.black,
-                    elevation: 5,
+                child: Card(
+                  margin: EdgeInsets.only(top: size.height * 0.03),
+                  child: ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ManualPass(),
+                        ),
+                      );
+                    },
+                    icon: Icon(Icons.drive_file_rename_outline),
+                    label: Text(
+                      '수기처리',
+                      style: TextStyle(
+                        fontSize: 16,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      // fixedSize: Size(size.width * 0.9, size.height * 0.065),
+                      padding: EdgeInsets.all(20.0),
+                      alignment: Alignment.centerLeft,
+                      primary: Colors.white,
+                      onPrimary: Colors.black,
+                      elevation: 5,
+                    ),
                   ),
                 ),
               ),
