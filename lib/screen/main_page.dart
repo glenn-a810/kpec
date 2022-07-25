@@ -328,8 +328,7 @@ class _mainState extends State<_main> {
                   margin: EdgeInsets.only(top: size.height * 0.03),
                   child: ElevatedButton.icon(
                     onPressed: () {
-                      Navigator.push(
-                        context,
+                      Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) => ManualPass(),
                         ),
@@ -367,14 +366,26 @@ class _mainState extends State<_main> {
                           width: size.width * 0.02,
                         ),
                         // Text('수기처리'),
-                        TextButton(
-                          onPressed: () {
-                            // Navigator.of(context).push(MaterialPageRoute(
-                            //     builder: (context) => ManualPass()));
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ManualPass()));
+                        // TextButton(
+                        //   onPressed: () {
+                        //     // Navigator.of(context).push(MaterialPageRoute(
+                        //     //     builder: (context) => ManualPass()));
+                        //     Navigator.push(
+                        //         context,
+                        //         MaterialPageRoute(
+                        //             builder: (context) => ManualPass()));
+                        //   },
+                        //   child: Text(
+                        //     '수기처리',
+                        //     style: TextStyle(
+                        //       color: Colors.black,
+                        //     ),
+                        //   ),
+                        // ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => ManualPass()));
                           },
                           child: Text(
                             '수기처리',
